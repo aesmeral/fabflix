@@ -1,0 +1,30 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 12348
+  path: /api/billing
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: test.log
+databaseConfig:
+  dbUsername: cs122bg8
+  dbPassword: uKsQjdS3lpZv.
+  dbHostname: localhost
+  dbPort: 3309
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: cs122bg8
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+idmConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 12346
+  path: /api/idm
+idmEndpoints:
+  privilege: privilege
+moviesConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 12347
+  path: /api/movies
+moviesEndpoints:
+  thumbnail: thumbnail

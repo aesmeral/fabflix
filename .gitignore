@@ -1,0 +1,6 @@
+billing/build
+front-end/node_modules
+gateway/build
+idm/build
+makefile
+movies/build

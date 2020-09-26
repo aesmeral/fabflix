@@ -1,0 +1,2406 @@
+[2020/02/11 21:09:25][CONFIG][initService]  Starting service...
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Scheme: http://
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Port: 12345
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Path: /api/movies
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database hostname: localhost
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database port: 3308
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database username: cs122bg8
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database password provided? true
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database name: cs122bg8
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  IDM Scheme: http://
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  IDM Port: 1521
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2020/02/11 21:09:25][CONFIG][currentConfigs]  IDM Privilege Path: privilege
+[2020/02/11 21:09:25][CONFIG][connectToDatabase]  Connecting to database...
+[2020/02/11 21:09:25][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3308/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:26][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3308/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12345/api/movies
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/02/11 21:09:26][CONFIG][initHTTPServer]  HTTP server started.
+[2020/02/11 21:09:26][CONFIG][initService]  Service initialized.
+[2020/02/11 21:11:30][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:11:30][INFO][search]  Built Successful...
+[2020/02/11 21:11:30][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:11:30][INFO][makePost]  Building client ...
+[2020/02/11 21:11:30][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:11:30][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:11:30][INFO][makePost]  Sending request ... 
+[2020/02/11 21:11:31][INFO][makePost]  Request sent.
+[2020/02/11 21:11:31][INFO][makePost]  Recieved status 200
+[2020/02/11 21:11:31][INFO][search]  Creating a builder...
+[2020/02/11 21:11:31][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:11:31][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:11:31][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:11:31][INFO][search]  Query was successful ... 
+[2020/02/11 21:11:31][INFO][search]  Extracting query data .. 
+[2020/02/11 21:11:31][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:11:50][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:11:50][INFO][search]  Built Successful...
+[2020/02/11 21:11:50][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:11:50][INFO][makePost]  Building client ...
+[2020/02/11 21:11:50][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:11:50][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:11:50][INFO][makePost]  Sending request ... 
+[2020/02/11 21:11:51][INFO][makePost]  Request sent.
+[2020/02/11 21:11:51][INFO][makePost]  Recieved status 200
+[2020/02/11 21:11:51][INFO][search]  Creating a builder...
+[2020/02/11 21:11:51][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:11:51][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:11:51][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:11:51][INFO][search]  Query was successful ... 
+[2020/02/11 21:11:51][INFO][search]  Extracting query data .. 
+[2020/02/11 21:11:51][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:12:38][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:12:38][INFO][search]  Built Successful...
+[2020/02/11 21:12:38][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:12:38][INFO][makePost]  Building client ...
+[2020/02/11 21:12:38][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:12:38][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:12:38][INFO][makePost]  Sending request ... 
+[2020/02/11 21:12:38][INFO][makePost]  Request sent.
+[2020/02/11 21:12:38][INFO][makePost]  Recieved status 200
+[2020/02/11 21:12:38][INFO][search]  Creating a builder...
+[2020/02/11 21:12:38][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:12:38][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:12:38][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:12:38][INFO][search]  Query was successful ... 
+[2020/02/11 21:12:38][INFO][search]  Extracting query data .. 
+[2020/02/11 21:12:38][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:14:12][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:14:12][INFO][search]  Built Successful...
+[2020/02/11 21:14:12][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:14:12][INFO][makePost]  Building client ...
+[2020/02/11 21:14:12][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:14:12][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:14:12][INFO][makePost]  Sending request ... 
+[2020/02/11 21:14:12][INFO][makePost]  Request sent.
+[2020/02/11 21:14:12][INFO][makePost]  Recieved status 200
+[2020/02/11 21:14:12][INFO][search]  Creating a builder...
+[2020/02/11 21:14:12][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:14:12][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:14:12][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:14:12][INFO][search]  Query was successful ... 
+[2020/02/11 21:14:12][INFO][search]  Extracting query data .. 
+[2020/02/11 21:14:12][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:20:24][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:20:24][INFO][search]  Built Successful...
+[2020/02/11 21:20:24][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:20:24][INFO][makePost]  Building client ...
+[2020/02/11 21:20:24][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:20:24][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:20:24][INFO][makePost]  Sending request ... 
+[2020/02/11 21:20:24][INFO][makePost]  Request sent.
+[2020/02/11 21:20:24][INFO][makePost]  Recieved status 200
+[2020/02/11 21:20:24][INFO][search]  Creating a builder...
+[2020/02/11 21:20:24][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:20:24][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:20:24][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:20:24][INFO][search]  Query was successful ... 
+[2020/02/11 21:20:24][INFO][search]  Extracting query data .. 
+[2020/02/11 21:20:24][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:20:31][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:20:31][INFO][search]  Built Successful...
+[2020/02/11 21:20:31][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:20:31][INFO][makePost]  Building client ...
+[2020/02/11 21:20:31][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:20:31][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:20:31][INFO][makePost]  Sending request ... 
+[2020/02/11 21:20:31][INFO][makePost]  Request sent.
+[2020/02/11 21:20:31][INFO][makePost]  Recieved status 200
+[2020/02/11 21:20:31][INFO][search]  Creating a builder...
+[2020/02/11 21:20:31][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:20:31][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:20:31][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:20:31][INFO][search]  Query was successful ... 
+[2020/02/11 21:20:31][INFO][search]  Extracting query data .. 
+[2020/02/11 21:20:31][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:21:37][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:21:37][INFO][search]  Built Successful...
+[2020/02/11 21:21:37][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:21:37][INFO][makePost]  Building client ...
+[2020/02/11 21:21:37][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:21:37][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:21:37][INFO][makePost]  Sending request ... 
+[2020/02/11 21:21:37][INFO][makePost]  Request sent.
+[2020/02/11 21:21:37][INFO][makePost]  Recieved status 200
+[2020/02/11 21:21:37][INFO][search]  Creating a builder...
+[2020/02/11 21:21:37][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:21:37][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:21:37][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:21:38][INFO][search]  Query was successful ... 
+[2020/02/11 21:21:38][INFO][search]  Extracting query data .. 
+[2020/02/11 21:21:38][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:21:39][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:21:39][INFO][search]  Built Successful...
+[2020/02/11 21:21:39][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:21:39][INFO][makePost]  Building client ...
+[2020/02/11 21:21:39][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:21:39][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:21:39][INFO][makePost]  Sending request ... 
+[2020/02/11 21:21:39][INFO][makePost]  Request sent.
+[2020/02/11 21:21:39][INFO][makePost]  Recieved status 200
+[2020/02/11 21:21:39][INFO][search]  Creating a builder...
+[2020/02/11 21:21:39][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:21:39][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:21:39][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:21:39][INFO][search]  Query was successful ... 
+[2020/02/11 21:21:39][INFO][search]  Extracting query data .. 
+[2020/02/11 21:21:39][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:23:50][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:23:50][INFO][search]  Built Successful...
+[2020/02/11 21:23:50][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:23:50][INFO][makePost]  Building client ...
+[2020/02/11 21:23:50][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:23:50][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:23:50][INFO][makePost]  Sending request ... 
+[2020/02/11 21:23:50][INFO][makePost]  Request sent.
+[2020/02/11 21:23:50][INFO][makePost]  Recieved status 200
+[2020/02/11 21:23:50][INFO][search]  Creating a builder...
+[2020/02/11 21:23:50][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:23:50][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:23:50][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:23:50][INFO][search]  Query was successful ... 
+[2020/02/11 21:23:50][INFO][search]  Extracting query data .. 
+[2020/02/11 21:23:50][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:28:00][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:28:00][INFO][search]  Built Successful...
+[2020/02/11 21:28:00][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:28:00][INFO][makePost]  Building client ...
+[2020/02/11 21:28:00][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:28:00][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:28:00][INFO][makePost]  Sending request ... 
+[2020/02/11 21:28:00][INFO][makePost]  Request sent.
+[2020/02/11 21:28:00][INFO][makePost]  Recieved status 200
+[2020/02/11 21:28:00][INFO][search]  Creating a builder...
+[2020/02/11 21:28:00][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:28:00][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:28:00][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:28:00][INFO][search]  Query was successful ... 
+[2020/02/11 21:28:00][INFO][search]  Extracting query data .. 
+[2020/02/11 21:28:00][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:35:01][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:35:01][INFO][search]  Built Successful...
+[2020/02/11 21:35:01][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:35:01][INFO][makePost]  Building client ...
+[2020/02/11 21:35:01][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:35:01][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:35:01][INFO][makePost]  Sending request ... 
+[2020/02/11 21:35:01][INFO][makePost]  Request sent.
+[2020/02/11 21:35:01][INFO][makePost]  Recieved status 200
+[2020/02/11 21:35:01][INFO][search]  Creating a builder...
+[2020/02/11 21:35:01][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:35:01][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:35:01][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:35:01][INFO][search]  Query was successful ... 
+[2020/02/11 21:35:01][INFO][search]  Extracting query data .. 
+[2020/02/11 21:35:01][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:38:37][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:38:37][INFO][search]  Built Successful...
+[2020/02/11 21:38:37][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:38:37][INFO][makePost]  Building client ...
+[2020/02/11 21:38:37][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:38:37][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:38:37][INFO][makePost]  Sending request ... 
+[2020/02/11 21:38:37][INFO][makePost]  Request sent.
+[2020/02/11 21:38:37][INFO][makePost]  Recieved status 200
+[2020/02/11 21:38:37][INFO][search]  Creating a builder...
+[2020/02/11 21:38:37][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:38:37][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:38:37][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:38:37][INFO][search]  Query was successful ... 
+[2020/02/11 21:38:37][INFO][search]  Extracting query data .. 
+[2020/02/11 21:38:37][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:38:56][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:38:56][INFO][search]  Built Successful...
+[2020/02/11 21:38:56][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:38:56][INFO][makePost]  Building client ...
+[2020/02/11 21:38:56][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:38:56][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:38:56][INFO][makePost]  Sending request ... 
+[2020/02/11 21:38:56][INFO][makePost]  Request sent.
+[2020/02/11 21:38:56][INFO][makePost]  Recieved status 200
+[2020/02/11 21:38:56][INFO][search]  Creating a builder...
+[2020/02/11 21:38:56][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:38:56][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:38:56][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:38:56][INFO][search]  Query was successful ... 
+[2020/02/11 21:38:56][INFO][search]  Extracting query data .. 
+[2020/02/11 21:38:56][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:39:16][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:39:16][INFO][search]  Built Successful...
+[2020/02/11 21:39:16][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:39:16][INFO][makePost]  Building client ...
+[2020/02/11 21:39:16][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:39:16][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:39:16][INFO][makePost]  Sending request ... 
+[2020/02/11 21:39:16][INFO][makePost]  Request sent.
+[2020/02/11 21:39:16][INFO][makePost]  Recieved status 200
+[2020/02/11 21:39:16][INFO][search]  Creating a builder...
+[2020/02/11 21:39:16][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:39:16][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:39:16][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:39:16][INFO][search]  Query was successful ... 
+[2020/02/11 21:39:16][INFO][search]  Extracting query data .. 
+[2020/02/11 21:39:16][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:39:45][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:39:45][INFO][search]  Built Successful...
+[2020/02/11 21:39:45][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:39:45][INFO][makePost]  Building client ...
+[2020/02/11 21:39:45][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:39:45][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:39:45][INFO][makePost]  Sending request ... 
+[2020/02/11 21:39:45][INFO][makePost]  Request sent.
+[2020/02/11 21:39:45][INFO][makePost]  Recieved status 200
+[2020/02/11 21:39:45][INFO][search]  Creating a builder...
+[2020/02/11 21:39:45][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:39:45][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:39:45][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:39:45][INFO][search]  Query was successful ... 
+[2020/02/11 21:39:45][INFO][search]  Extracting query data .. 
+[2020/02/11 21:39:45][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:40:25][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:40:25][INFO][search]  Built Successful...
+[2020/02/11 21:40:25][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:40:25][INFO][makePost]  Building client ...
+[2020/02/11 21:40:25][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:40:25][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:40:25][INFO][makePost]  Sending request ... 
+[2020/02/11 21:40:25][INFO][makePost]  Request sent.
+[2020/02/11 21:40:25][INFO][makePost]  Recieved status 200
+[2020/02/11 21:40:25][INFO][search]  Creating a builder...
+[2020/02/11 21:40:25][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:40:25][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:40:25][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:40:25][INFO][search]  Query was successful ... 
+[2020/02/11 21:40:25][INFO][search]  Extracting query data .. 
+[2020/02/11 21:40:25][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:40:36][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:40:36][INFO][search]  Built Successful...
+[2020/02/11 21:40:36][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:40:36][INFO][makePost]  Building client ...
+[2020/02/11 21:40:36][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:40:36][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:40:36][INFO][makePost]  Sending request ... 
+[2020/02/11 21:40:36][INFO][makePost]  Request sent.
+[2020/02/11 21:40:36][INFO][makePost]  Recieved status 200
+[2020/02/11 21:40:36][INFO][search]  Creating a builder...
+[2020/02/11 21:40:36][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:40:36][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:40:36][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:40:36][INFO][search]  Query was successful ... 
+[2020/02/11 21:40:36][INFO][search]  Extracting query data .. 
+[2020/02/11 21:40:36][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:41:32][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:41:32][INFO][search]  Built Successful...
+[2020/02/11 21:41:32][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:41:32][INFO][makePost]  Building client ...
+[2020/02/11 21:41:32][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:41:32][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:41:32][INFO][makePost]  Sending request ... 
+[2020/02/11 21:41:32][INFO][makePost]  Request sent.
+[2020/02/11 21:41:32][INFO][makePost]  Recieved status 200
+[2020/02/11 21:41:32][INFO][search]  Creating a builder...
+[2020/02/11 21:41:32][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:41:32][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:41:32][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:41:32][INFO][search]  Query was successful ... 
+[2020/02/11 21:41:32][INFO][search]  Extracting query data .. 
+[2020/02/11 21:41:32][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:43:54][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:43:54][INFO][search]  Built Successful...
+[2020/02/11 21:43:54][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:43:54][INFO][makePost]  Building client ...
+[2020/02/11 21:43:54][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:43:54][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:43:54][INFO][makePost]  Sending request ... 
+[2020/02/11 21:43:54][INFO][makePost]  Request sent.
+[2020/02/11 21:43:54][INFO][makePost]  Recieved status 200
+[2020/02/11 21:43:54][INFO][search]  Creating a builder...
+[2020/02/11 21:43:54][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:43:54][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:43:54][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:43:54][INFO][search]  Query was successful ... 
+[2020/02/11 21:43:54][INFO][search]  Extracting query data .. 
+[2020/02/11 21:43:54][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:44:12][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:44:12][INFO][search]  Built Successful...
+[2020/02/11 21:44:12][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:44:12][INFO][makePost]  Building client ...
+[2020/02/11 21:44:12][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:44:12][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:44:12][INFO][makePost]  Sending request ... 
+[2020/02/11 21:44:12][INFO][makePost]  Request sent.
+[2020/02/11 21:44:12][INFO][makePost]  Recieved status 200
+[2020/02/11 21:44:12][INFO][search]  Creating a builder...
+[2020/02/11 21:44:12][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:44:12][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:44:12][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:44:12][INFO][search]  Query was successful ... 
+[2020/02/11 21:44:12][INFO][search]  Extracting query data .. 
+[2020/02/11 21:44:12][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:44:50][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:44:50][INFO][search]  Built Successful...
+[2020/02/11 21:44:50][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:44:50][INFO][makePost]  Building client ...
+[2020/02/11 21:44:50][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:44:50][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:44:50][INFO][makePost]  Sending request ... 
+[2020/02/11 21:44:50][INFO][makePost]  Request sent.
+[2020/02/11 21:44:50][INFO][makePost]  Recieved status 200
+[2020/02/11 21:44:50][INFO][search]  Creating a builder...
+[2020/02/11 21:44:50][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:44:50][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:44:50][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:44:50][INFO][search]  Query was successful ... 
+[2020/02/11 21:44:50][INFO][search]  Extracting query data .. 
+[2020/02/11 21:44:50][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:45:27][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:45:27][INFO][search]  Built Successful...
+[2020/02/11 21:45:27][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:45:27][INFO][makePost]  Building client ...
+[2020/02/11 21:45:27][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:45:27][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:45:27][INFO][makePost]  Sending request ... 
+[2020/02/11 21:45:27][INFO][makePost]  Request sent.
+[2020/02/11 21:45:27][INFO][makePost]  Recieved status 200
+[2020/02/11 21:45:27][INFO][search]  Creating a builder...
+[2020/02/11 21:45:27][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:45:27][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:45:27][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:45:27][INFO][search]  Query was successful ... 
+[2020/02/11 21:45:27][INFO][search]  Extracting query data .. 
+[2020/02/11 21:45:27][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:46:24][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:46:24][INFO][search]  Built Successful...
+[2020/02/11 21:46:24][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:46:24][INFO][makePost]  Building client ...
+[2020/02/11 21:46:24][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:46:24][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:46:24][INFO][makePost]  Sending request ... 
+[2020/02/11 21:46:24][INFO][makePost]  Request sent.
+[2020/02/11 21:46:24][INFO][makePost]  Recieved status 200
+[2020/02/11 21:46:24][INFO][search]  Creating a builder...
+[2020/02/11 21:46:24][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:46:24][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:46:24][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:46:24][INFO][search]  Query was successful ... 
+[2020/02/11 21:46:24][INFO][search]  Extracting query data .. 
+[2020/02/11 21:46:24][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:46:35][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:46:35][INFO][search]  Built Successful...
+[2020/02/11 21:46:35][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:46:35][INFO][makePost]  Building client ...
+[2020/02/11 21:46:35][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:46:35][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:46:35][INFO][makePost]  Sending request ... 
+[2020/02/11 21:46:35][INFO][makePost]  Request sent.
+[2020/02/11 21:46:35][INFO][makePost]  Recieved status 200
+[2020/02/11 21:46:35][INFO][search]  Creating a builder...
+[2020/02/11 21:46:35][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:46:35][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:46:35][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:46:35][INFO][search]  Query was successful ... 
+[2020/02/11 21:46:35][INFO][search]  Extracting query data .. 
+[2020/02/11 21:46:35][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:46:44][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:46:44][INFO][search]  Built Successful...
+[2020/02/11 21:46:44][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:46:44][INFO][makePost]  Building client ...
+[2020/02/11 21:46:44][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:46:44][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:46:44][INFO][makePost]  Sending request ... 
+[2020/02/11 21:46:45][INFO][makePost]  Request sent.
+[2020/02/11 21:46:45][INFO][makePost]  Recieved status 200
+[2020/02/11 21:46:45][INFO][search]  Creating a builder...
+[2020/02/11 21:46:45][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:46:45][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:46:45][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:46:46][INFO][search]  Query was successful ... 
+[2020/02/11 21:46:46][INFO][search]  Extracting query data .. 
+[2020/02/11 21:46:46][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:53:22][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:53:22][INFO][search]  Built Successful...
+[2020/02/11 21:53:22][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:53:22][INFO][makePost]  Building client ...
+[2020/02/11 21:53:22][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:53:22][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:53:22][INFO][makePost]  Sending request ... 
+[2020/02/11 21:53:22][INFO][makePost]  Request sent.
+[2020/02/11 21:53:22][INFO][makePost]  Recieved status 200
+[2020/02/11 21:53:22][INFO][search]  Creating a builder...
+[2020/02/11 21:53:22][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:53:22][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:53:22][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:53:22][INFO][search]  Query was successful ... 
+[2020/02/11 21:53:22][INFO][search]  Extracting query data .. 
+[2020/02/11 21:53:22][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:53:29][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:53:29][INFO][search]  Built Successful...
+[2020/02/11 21:53:29][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:53:29][INFO][makePost]  Building client ...
+[2020/02/11 21:53:29][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:53:29][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:53:29][INFO][makePost]  Sending request ... 
+[2020/02/11 21:53:29][INFO][makePost]  Request sent.
+[2020/02/11 21:53:29][INFO][makePost]  Recieved status 200
+[2020/02/11 21:53:29][INFO][search]  Creating a builder...
+[2020/02/11 21:53:29][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:53:29][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:53:29][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:53:29][INFO][search]  Query was successful ... 
+[2020/02/11 21:53:29][INFO][search]  Extracting query data .. 
+[2020/02/11 21:53:29][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:55:07][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:55:07][INFO][search]  Built Successful...
+[2020/02/11 21:55:07][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:55:07][INFO][makePost]  Building client ...
+[2020/02/11 21:55:07][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:55:07][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:55:07][INFO][makePost]  Sending request ... 
+[2020/02/11 21:55:07][INFO][makePost]  Request sent.
+[2020/02/11 21:55:07][INFO][makePost]  Recieved status 200
+[2020/02/11 21:55:07][INFO][search]  Creating a builder...
+[2020/02/11 21:55:07][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:55:07][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:55:07][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.year = 2019 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:55:07][INFO][search]  Query was successful ... 
+[2020/02/11 21:55:07][INFO][search]  Extracting query data .. 
+[2020/02/11 21:55:07][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:55:15][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:55:15][INFO][search]  Built Successful...
+[2020/02/11 21:55:15][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:55:15][INFO][makePost]  Building client ...
+[2020/02/11 21:55:15][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:55:15][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:55:15][INFO][makePost]  Sending request ... 
+[2020/02/11 21:55:15][INFO][makePost]  Request sent.
+[2020/02/11 21:55:15][INFO][makePost]  Recieved status 200
+[2020/02/11 21:55:15][INFO][search]  Creating a builder...
+[2020/02/11 21:55:15][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:55:15][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:55:15][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%2019%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:55:15][INFO][search]  Query was successful ... 
+[2020/02/11 21:55:15][INFO][search]  Extracting query data .. 
+[2020/02/11 21:55:15][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 21:55:26][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:55:26][INFO][search]  Built Successful...
+[2020/02/11 21:55:26][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:55:26][INFO][makePost]  Building client ...
+[2020/02/11 21:55:26][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:55:26][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:55:26][INFO][makePost]  Sending request ... 
+[2020/02/11 21:55:26][INFO][makePost]  Request sent.
+[2020/02/11 21:55:26][INFO][makePost]  Recieved status 200
+[2020/02/11 21:55:26][INFO][search]  Creating a builder...
+[2020/02/11 21:55:26][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:55:26][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:55:26][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:55:26][INFO][search]  Query was successful ... 
+[2020/02/11 21:55:26][INFO][search]  Extracting query data .. 
+[2020/02/11 21:55:26][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:55:31][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:55:31][INFO][search]  Built Successful...
+[2020/02/11 21:55:31][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:55:31][INFO][makePost]  Building client ...
+[2020/02/11 21:55:31][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:55:31][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:55:31][INFO][makePost]  Sending request ... 
+[2020/02/11 21:55:31][INFO][makePost]  Request sent.
+[2020/02/11 21:55:31][INFO][makePost]  Recieved status 200
+[2020/02/11 21:55:31][INFO][search]  Creating a builder...
+[2020/02/11 21:55:31][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:55:31][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:55:31][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.year = 2019 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:55:31][INFO][search]  Query was successful ... 
+[2020/02/11 21:55:31][INFO][search]  Extracting query data .. 
+[2020/02/11 21:55:31][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:55:35][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:55:35][INFO][search]  Built Successful...
+[2020/02/11 21:55:35][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:55:35][INFO][makePost]  Building client ...
+[2020/02/11 21:55:35][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:55:35][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:55:35][INFO][makePost]  Sending request ... 
+[2020/02/11 21:55:35][INFO][makePost]  Request sent.
+[2020/02/11 21:55:35][INFO][makePost]  Recieved status 200
+[2020/02/11 21:55:35][INFO][search]  Creating a builder...
+[2020/02/11 21:55:35][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:55:35][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:55:35][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%2019%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:55:35][INFO][search]  Query was successful ... 
+[2020/02/11 21:55:35][INFO][search]  Extracting query data .. 
+[2020/02/11 21:55:35][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 21:56:05][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:56:05][INFO][search]  Built Successful...
+[2020/02/11 21:56:05][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:56:05][INFO][makePost]  Building client ...
+[2020/02/11 21:56:05][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:56:05][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:56:05][INFO][makePost]  Sending request ... 
+[2020/02/11 21:56:05][INFO][makePost]  Request sent.
+[2020/02/11 21:56:05][INFO][makePost]  Recieved status 200
+[2020/02/11 21:56:05][INFO][search]  Creating a builder...
+[2020/02/11 21:56:05][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:56:05][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:56:05][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:56:05][INFO][search]  Query was successful ... 
+[2020/02/11 21:56:05][INFO][search]  Extracting query data .. 
+[2020/02/11 21:56:05][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 21:56:59][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:56:59][INFO][search]  Built Successful...
+[2020/02/11 21:56:59][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:56:59][INFO][makePost]  Building client ...
+[2020/02/11 21:56:59][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:56:59][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:56:59][INFO][makePost]  Sending request ... 
+[2020/02/11 21:56:59][INFO][makePost]  Request sent.
+[2020/02/11 21:56:59][INFO][makePost]  Recieved status 200
+[2020/02/11 21:56:59][INFO][search]  Creating a builder...
+[2020/02/11 21:56:59][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:56:59][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:56:59][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%avenger%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:56:59][INFO][search]  Query was successful ... 
+[2020/02/11 21:56:59][INFO][search]  Extracting query data .. 
+[2020/02/11 21:56:59][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 21:57:10][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:57:10][INFO][search]  Built Successful...
+[2020/02/11 21:57:10][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:57:10][INFO][makePost]  Building client ...
+[2020/02/11 21:57:10][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:57:10][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:57:10][INFO][makePost]  Sending request ... 
+[2020/02/11 21:57:10][INFO][makePost]  Request sent.
+[2020/02/11 21:57:10][INFO][makePost]  Recieved status 200
+[2020/02/11 21:57:10][INFO][search]  Creating a builder...
+[2020/02/11 21:57:10][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:57:10][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:57:10][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:57:10][INFO][search]  Query was successful ... 
+[2020/02/11 21:57:10][INFO][search]  Extracting query data .. 
+[2020/02/11 21:57:10][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 21:58:15][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 21:58:15][INFO][search]  Built Successful...
+[2020/02/11 21:58:15][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 21:58:15][INFO][makePost]  Building client ...
+[2020/02/11 21:58:15][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 21:58:15][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 21:58:15][INFO][makePost]  Sending request ... 
+[2020/02/11 21:58:15][INFO][makePost]  Request sent.
+[2020/02/11 21:58:15][INFO][makePost]  Recieved status 200
+[2020/02/11 21:58:15][INFO][search]  Creating a builder...
+[2020/02/11 21:58:15][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 21:58:15][INFO][prepareStatement]  Entering parameters
+[2020/02/11 21:58:15][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%notfound%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 21:58:16][INFO][search]  Query was successful ... 
+[2020/02/11 21:58:16][INFO][search]  Extracting query data .. 
+[2020/02/11 21:58:16][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:00:02][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:02][INFO][search]  Built Successful...
+[2020/02/11 22:00:02][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:02][INFO][makePost]  Building client ...
+[2020/02/11 22:00:02][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:02][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:02][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:02][INFO][makePost]  Request sent.
+[2020/02/11 22:00:02][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:02][INFO][search]  Creating a builder...
+[2020/02/11 22:00:02][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:02][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:02][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%none%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:02][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:02][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:02][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:00:04][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:04][INFO][search]  Built Successful...
+[2020/02/11 22:00:04][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:04][INFO][makePost]  Building client ...
+[2020/02/11 22:00:04][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:04][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:04][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:04][INFO][makePost]  Request sent.
+[2020/02/11 22:00:04][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:04][INFO][search]  Creating a builder...
+[2020/02/11 22:00:04][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:04][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:04][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%none%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:04][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:04][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:04][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:00:04][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:04][INFO][search]  Built Successful...
+[2020/02/11 22:00:04][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:04][INFO][makePost]  Building client ...
+[2020/02/11 22:00:04][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:04][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:04][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:04][INFO][makePost]  Request sent.
+[2020/02/11 22:00:04][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:04][INFO][search]  Creating a builder...
+[2020/02/11 22:00:04][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:04][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:04][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%none%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:04][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:04][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:04][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:00:18][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:18][INFO][search]  Built Successful...
+[2020/02/11 22:00:18][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:18][INFO][makePost]  Building client ...
+[2020/02/11 22:00:18][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:18][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:18][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:18][INFO][makePost]  Request sent.
+[2020/02/11 22:00:18][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:18][INFO][search]  Creating a builder...
+[2020/02/11 22:00:18][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:18][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:18][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:18][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:18][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:18][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:00:21][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:21][INFO][search]  Built Successful...
+[2020/02/11 22:00:21][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:21][INFO][makePost]  Building client ...
+[2020/02/11 22:00:21][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:21][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:21][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:21][INFO][makePost]  Request sent.
+[2020/02/11 22:00:21][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:21][INFO][search]  Creating a builder...
+[2020/02/11 22:00:21][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:21][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:21][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:21][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:21][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:21][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:00:28][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:00:28][INFO][search]  Built Successful...
+[2020/02/11 22:00:28][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:00:28][INFO][makePost]  Building client ...
+[2020/02/11 22:00:28][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:00:28][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:00:28][INFO][makePost]  Sending request ... 
+[2020/02/11 22:00:28][INFO][makePost]  Request sent.
+[2020/02/11 22:00:28][INFO][makePost]  Recieved status 200
+[2020/02/11 22:00:28][INFO][search]  Creating a builder...
+[2020/02/11 22:00:28][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:00:28][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:00:28][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:00:28][INFO][search]  Query was successful ... 
+[2020/02/11 22:00:28][INFO][search]  Extracting query data .. 
+[2020/02/11 22:00:28][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:04:36][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:04:36][INFO][search]  Built Successful...
+[2020/02/11 22:04:36][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:04:36][INFO][makePost]  Building client ...
+[2020/02/11 22:04:36][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:04:36][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:04:36][INFO][makePost]  Sending request ... 
+[2020/02/11 22:04:36][INFO][makePost]  Request sent.
+[2020/02/11 22:04:36][INFO][makePost]  Recieved status 200
+[2020/02/11 22:04:36][INFO][search]  Creating a builder...
+[2020/02/11 22:04:36][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:04:36][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:04:36][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:04:36][INFO][search]  Query was successful ... 
+[2020/02/11 22:04:36][INFO][search]  Extracting query data .. 
+[2020/02/11 22:04:36][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:04:45][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:04:45][INFO][search]  Built Successful...
+[2020/02/11 22:04:45][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:04:45][INFO][makePost]  Building client ...
+[2020/02/11 22:04:45][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:04:45][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:04:45][INFO][makePost]  Sending request ... 
+[2020/02/11 22:04:45][INFO][makePost]  Request sent.
+[2020/02/11 22:04:45][INFO][makePost]  Recieved status 200
+[2020/02/11 22:04:45][INFO][search]  Creating a builder...
+[2020/02/11 22:04:45][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:04:45][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:04:45][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:04:45][INFO][search]  Query was successful ... 
+[2020/02/11 22:04:45][INFO][search]  Extracting query data .. 
+[2020/02/11 22:04:45][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:05:35][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:05:35][INFO][search]  Built Successful...
+[2020/02/11 22:05:35][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:05:35][INFO][makePost]  Building client ...
+[2020/02/11 22:05:35][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:05:35][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:05:35][INFO][makePost]  Sending request ... 
+[2020/02/11 22:05:35][INFO][makePost]  Request sent.
+[2020/02/11 22:05:35][INFO][makePost]  Recieved status 200
+[2020/02/11 22:05:35][INFO][search]  Creating a builder...
+[2020/02/11 22:05:35][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:05:35][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:05:35][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:05:35][INFO][search]  Query was successful ... 
+[2020/02/11 22:05:35][INFO][search]  Extracting query data .. 
+[2020/02/11 22:05:35][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:05:41][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:05:41][INFO][search]  Built Successful...
+[2020/02/11 22:05:41][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:05:41][INFO][makePost]  Building client ...
+[2020/02/11 22:05:41][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:05:41][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:05:41][INFO][makePost]  Sending request ... 
+[2020/02/11 22:05:41][INFO][makePost]  Request sent.
+[2020/02/11 22:05:41][INFO][makePost]  Recieved status 200
+[2020/02/11 22:05:41][INFO][search]  Creating a builder...
+[2020/02/11 22:05:41][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:05:41][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:05:41][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:05:41][INFO][search]  Query was successful ... 
+[2020/02/11 22:05:41][INFO][search]  Extracting query data .. 
+[2020/02/11 22:05:41][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:05:45][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:05:45][INFO][search]  Built Successful...
+[2020/02/11 22:05:45][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:05:45][INFO][makePost]  Building client ...
+[2020/02/11 22:05:45][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:05:45][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:05:45][INFO][makePost]  Sending request ... 
+[2020/02/11 22:05:45][INFO][makePost]  Request sent.
+[2020/02/11 22:05:45][INFO][makePost]  Recieved status 200
+[2020/02/11 22:05:45][INFO][search]  Creating a builder...
+[2020/02/11 22:05:45][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:05:45][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:05:45][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:05:45][INFO][search]  Query was successful ... 
+[2020/02/11 22:05:45][INFO][search]  Extracting query data .. 
+[2020/02/11 22:05:45][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:06:13][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:06:13][INFO][search]  Built Successful...
+[2020/02/11 22:06:13][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:06:13][INFO][makePost]  Building client ...
+[2020/02/11 22:06:13][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:06:13][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:06:13][INFO][makePost]  Sending request ... 
+[2020/02/11 22:06:13][INFO][makePost]  Request sent.
+[2020/02/11 22:06:13][INFO][makePost]  Recieved status 200
+[2020/02/11 22:06:13][INFO][search]  Creating a builder...
+[2020/02/11 22:06:13][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:06:13][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:06:13][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:06:13][INFO][search]  Query was successful ... 
+[2020/02/11 22:06:13][INFO][search]  Extracting query data .. 
+[2020/02/11 22:06:13][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:06:13][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:06:13][INFO][search]  Built Successful...
+[2020/02/11 22:06:13][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:06:13][INFO][makePost]  Building client ...
+[2020/02/11 22:06:13][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:06:13][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:06:13][INFO][makePost]  Sending request ... 
+[2020/02/11 22:06:13][INFO][makePost]  Request sent.
+[2020/02/11 22:06:13][INFO][makePost]  Recieved status 200
+[2020/02/11 22:06:13][INFO][search]  Creating a builder...
+[2020/02/11 22:06:13][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:06:13][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:06:13][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:06:13][INFO][search]  Query was successful ... 
+[2020/02/11 22:06:13][INFO][search]  Extracting query data .. 
+[2020/02/11 22:06:13][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:06:14][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:06:14][INFO][search]  Built Successful...
+[2020/02/11 22:06:14][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:06:14][INFO][makePost]  Building client ...
+[2020/02/11 22:06:14][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:06:14][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:06:14][INFO][makePost]  Sending request ... 
+[2020/02/11 22:06:14][INFO][makePost]  Request sent.
+[2020/02/11 22:06:14][INFO][makePost]  Recieved status 200
+[2020/02/11 22:06:14][INFO][search]  Creating a builder...
+[2020/02/11 22:06:14][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:06:14][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:06:14][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%Avengers%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:06:15][INFO][search]  Query was successful ... 
+[2020/02/11 22:06:15][INFO][search]  Extracting query data .. 
+[2020/02/11 22:06:15][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:07:48][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:07:48][INFO][search]  Built Successful...
+[2020/02/11 22:07:48][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:07:48][INFO][makePost]  Building client ...
+[2020/02/11 22:07:48][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:07:48][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:07:48][INFO][makePost]  Sending request ... 
+[2020/02/11 22:07:48][INFO][makePost]  Request sent.
+[2020/02/11 22:07:48][INFO][makePost]  Recieved status 200
+[2020/02/11 22:07:48][INFO][search]  Creating a builder...
+[2020/02/11 22:07:48][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:07:48][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:07:48][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:07:48][INFO][search]  Query was successful ... 
+[2020/02/11 22:07:48][INFO][search]  Extracting query data .. 
+[2020/02/11 22:07:48][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:07:56][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:07:56][INFO][search]  Built Successful...
+[2020/02/11 22:07:56][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:07:56][INFO][makePost]  Building client ...
+[2020/02/11 22:07:56][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:07:56][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:07:56][INFO][makePost]  Sending request ... 
+[2020/02/11 22:07:56][INFO][makePost]  Request sent.
+[2020/02/11 22:07:56][INFO][makePost]  Recieved status 200
+[2020/02/11 22:07:56][INFO][search]  Creating a builder...
+[2020/02/11 22:07:56][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:07:56][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:07:56][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%Anthony Russo%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:07:56][INFO][search]  Query was successful ... 
+[2020/02/11 22:07:56][INFO][search]  Extracting query data .. 
+[2020/02/11 22:07:56][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:08:48][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:08:48][INFO][search]  Built Successful...
+[2020/02/11 22:08:48][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:08:48][INFO][makePost]  Building client ...
+[2020/02/11 22:08:48][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:08:48][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:08:48][INFO][makePost]  Sending request ... 
+[2020/02/11 22:08:48][INFO][makePost]  Request sent.
+[2020/02/11 22:08:48][INFO][makePost]  Recieved status 200
+[2020/02/11 22:08:48][INFO][search]  Creating a builder...
+[2020/02/11 22:08:48][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:08:48][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:08:48][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Anthony Russo%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:08:48][INFO][search]  Query was successful ... 
+[2020/02/11 22:08:48][INFO][search]  Extracting query data .. 
+[2020/02/11 22:08:48][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:08:50][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:08:50][INFO][search]  Built Successful...
+[2020/02/11 22:08:50][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:08:50][INFO][makePost]  Building client ...
+[2020/02/11 22:08:50][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:08:50][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:08:50][INFO][makePost]  Sending request ... 
+[2020/02/11 22:08:50][INFO][makePost]  Request sent.
+[2020/02/11 22:08:50][INFO][makePost]  Recieved status 200
+[2020/02/11 22:08:50][INFO][search]  Creating a builder...
+[2020/02/11 22:08:50][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:08:50][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:08:50][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Anthony Russo%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:08:50][INFO][search]  Query was successful ... 
+[2020/02/11 22:08:50][INFO][search]  Extracting query data .. 
+[2020/02/11 22:08:50][INFO][search]  Sucessfully created a Response with Movies not found
+[2020/02/11 22:08:53][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:08:53][INFO][search]  Built Successful...
+[2020/02/11 22:08:53][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:08:53][INFO][makePost]  Building client ...
+[2020/02/11 22:08:53][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:08:53][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:08:53][INFO][makePost]  Sending request ... 
+[2020/02/11 22:08:54][INFO][makePost]  Request sent.
+[2020/02/11 22:08:54][INFO][makePost]  Recieved status 200
+[2020/02/11 22:08:54][INFO][search]  Creating a builder...
+[2020/02/11 22:08:54][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:08:54][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:08:54][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:08:54][INFO][search]  Query was successful ... 
+[2020/02/11 22:08:54][INFO][search]  Extracting query data .. 
+[2020/02/11 22:08:54][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:08:59][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:08:59][INFO][search]  Built Successful...
+[2020/02/11 22:08:59][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:08:59][INFO][makePost]  Building client ...
+[2020/02/11 22:08:59][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:08:59][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:08:59][INFO][makePost]  Sending request ... 
+[2020/02/11 22:08:59][INFO][makePost]  Request sent.
+[2020/02/11 22:08:59][INFO][makePost]  Recieved status 200
+[2020/02/11 22:08:59][INFO][search]  Creating a builder...
+[2020/02/11 22:08:59][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:08:59][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:08:59][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%Chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:08:59][INFO][search]  Query was successful ... 
+[2020/02/11 22:08:59][INFO][search]  Extracting query data .. 
+[2020/02/11 22:08:59][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:09:46][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:09:46][INFO][search]  Built Successful...
+[2020/02/11 22:09:46][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:09:46][INFO][makePost]  Building client ...
+[2020/02/11 22:09:46][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:09:46][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:09:46][INFO][makePost]  Sending request ... 
+[2020/02/11 22:09:46][INFO][makePost]  Request sent.
+[2020/02/11 22:09:46][INFO][makePost]  Recieved status 200
+[2020/02/11 22:09:46][INFO][search]  Creating a builder...
+[2020/02/11 22:09:46][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:09:46][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:09:46][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:09:46][INFO][search]  Query was successful ... 
+[2020/02/11 22:09:46][INFO][search]  Extracting query data .. 
+[2020/02/11 22:09:46][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:10:00][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:10:00][INFO][search]  Built Successful...
+[2020/02/11 22:10:00][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:10:00][INFO][makePost]  Building client ...
+[2020/02/11 22:10:00][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:10:00][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:10:00][INFO][makePost]  Sending request ... 
+[2020/02/11 22:10:00][INFO][makePost]  Request sent.
+[2020/02/11 22:10:00][INFO][makePost]  Recieved status 200
+[2020/02/11 22:10:00][INFO][search]  Creating a builder...
+[2020/02/11 22:10:00][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:10:00][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:10:00][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:10:00][INFO][search]  Query was successful ... 
+[2020/02/11 22:10:00][INFO][search]  Extracting query data .. 
+[2020/02/11 22:10:00][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:11:07][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:11:07][INFO][search]  Built Successful...
+[2020/02/11 22:11:07][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:11:07][INFO][makePost]  Building client ...
+[2020/02/11 22:11:07][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:11:07][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:11:07][INFO][makePost]  Sending request ... 
+[2020/02/11 22:11:07][INFO][makePost]  Request sent.
+[2020/02/11 22:11:07][INFO][makePost]  Recieved status 200
+[2020/02/11 22:11:07][INFO][search]  Creating a builder...
+[2020/02/11 22:11:07][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:11:07][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:11:07][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:11:07][INFO][search]  Query was successful ... 
+[2020/02/11 22:11:07][INFO][search]  Extracting query data .. 
+[2020/02/11 22:11:07][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:12:19][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:12:19][INFO][search]  Built Successful...
+[2020/02/11 22:12:19][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:12:19][INFO][makePost]  Building client ...
+[2020/02/11 22:12:19][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:12:19][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:12:19][INFO][makePost]  Sending request ... 
+[2020/02/11 22:12:19][INFO][makePost]  Request sent.
+[2020/02/11 22:12:19][INFO][makePost]  Recieved status 200
+[2020/02/11 22:12:19][INFO][search]  Creating a builder...
+[2020/02/11 22:12:19][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:12:19][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:12:19][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:12:19][INFO][search]  Query was successful ... 
+[2020/02/11 22:12:19][INFO][search]  Extracting query data .. 
+[2020/02/11 22:12:19][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:14:04][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:14:04][INFO][search]  Built Successful...
+[2020/02/11 22:14:04][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:14:04][INFO][makePost]  Building client ...
+[2020/02/11 22:14:04][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:14:04][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:14:04][INFO][makePost]  Sending request ... 
+[2020/02/11 22:14:04][INFO][makePost]  Request sent.
+[2020/02/11 22:14:04][INFO][makePost]  Recieved status 200
+[2020/02/11 22:14:04][INFO][search]  Creating a builder...
+[2020/02/11 22:14:04][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:14:04][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:14:04][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%Avengers: Endgame%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:14:04][INFO][search]  Query was successful ... 
+[2020/02/11 22:14:04][INFO][search]  Extracting query data .. 
+[2020/02/11 22:14:04][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:14:13][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:14:13][INFO][search]  Built Successful...
+[2020/02/11 22:14:13][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:14:13][INFO][makePost]  Building client ...
+[2020/02/11 22:14:13][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:14:13][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:14:13][INFO][makePost]  Sending request ... 
+[2020/02/11 22:14:13][INFO][makePost]  Request sent.
+[2020/02/11 22:14:13][INFO][makePost]  Recieved status 200
+[2020/02/11 22:14:13][INFO][search]  Creating a builder...
+[2020/02/11 22:14:13][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:14:13][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:14:13][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%game%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:14:13][INFO][search]  Query was successful ... 
+[2020/02/11 22:14:13][INFO][search]  Extracting query data .. 
+[2020/02/11 22:14:13][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:14:56][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:14:56][INFO][search]  Built Successful...
+[2020/02/11 22:14:56][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:14:56][INFO][makePost]  Building client ...
+[2020/02/11 22:14:56][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:14:56][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:14:56][INFO][makePost]  Sending request ... 
+[2020/02/11 22:14:56][INFO][makePost]  Request sent.
+[2020/02/11 22:14:56][INFO][makePost]  Recieved status 200
+[2020/02/11 22:14:56][INFO][search]  Creating a builder...
+[2020/02/11 22:14:56][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:14:56][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:14:56][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%game%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:14:56][INFO][search]  Query was successful ... 
+[2020/02/11 22:14:56][INFO][search]  Extracting query data .. 
+[2020/02/11 22:14:56][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:15:08][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:15:08][INFO][search]  Built Successful...
+[2020/02/11 22:15:08][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:15:08][INFO][makePost]  Building client ...
+[2020/02/11 22:15:08][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:15:08][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:15:08][INFO][makePost]  Sending request ... 
+[2020/02/11 22:15:08][INFO][makePost]  Request sent.
+[2020/02/11 22:15:08][INFO][makePost]  Recieved status 200
+[2020/02/11 22:15:08][INFO][search]  Creating a builder...
+[2020/02/11 22:15:08][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:15:08][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:15:08][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:15:08][INFO][search]  Query was successful ... 
+[2020/02/11 22:15:08][INFO][search]  Extracting query data .. 
+[2020/02/11 22:15:08][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:15:39][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:15:39][INFO][search]  Built Successful...
+[2020/02/11 22:15:39][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:15:39][INFO][makePost]  Building client ...
+[2020/02/11 22:15:39][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:15:39][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:15:39][INFO][makePost]  Sending request ... 
+[2020/02/11 22:15:39][INFO][makePost]  Request sent.
+[2020/02/11 22:15:39][INFO][makePost]  Recieved status 200
+[2020/02/11 22:15:39][INFO][search]  Creating a builder...
+[2020/02/11 22:15:39][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:15:39][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:15:39][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.title LIKE '%game%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:15:39][INFO][search]  Query was successful ... 
+[2020/02/11 22:15:39][INFO][search]  Extracting query data .. 
+[2020/02/11 22:15:39][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:15:48][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:15:48][INFO][search]  Built Successful...
+[2020/02/11 22:15:48][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:15:48][INFO][makePost]  Building client ...
+[2020/02/11 22:15:48][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:15:48][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:15:48][INFO][makePost]  Sending request ... 
+[2020/02/11 22:15:48][INFO][makePost]  Request sent.
+[2020/02/11 22:15:48][INFO][makePost]  Recieved status 200
+[2020/02/11 22:15:48][INFO][search]  Creating a builder...
+[2020/02/11 22:15:48][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:15:48][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:15:48][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:15:48][INFO][search]  Query was successful ... 
+[2020/02/11 22:15:48][INFO][search]  Extracting query data .. 
+[2020/02/11 22:15:48][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:18:19][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:18:19][INFO][search]  Built Successful...
+[2020/02/11 22:18:19][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:18:19][INFO][makePost]  Building client ...
+[2020/02/11 22:18:19][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:18:19][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:18:19][INFO][makePost]  Sending request ... 
+[2020/02/11 22:18:19][INFO][makePost]  Request sent.
+[2020/02/11 22:18:19][INFO][makePost]  Recieved status 200
+[2020/02/11 22:18:19][INFO][search]  Creating a builder...
+[2020/02/11 22:18:19][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:18:19][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:18:19][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND M.year = 2005 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:18:19][INFO][search]  Query was successful ... 
+[2020/02/11 22:18:19][INFO][search]  Extracting query data .. 
+[2020/02/11 22:18:19][INFO][search]  Successfully created a Response with Movies Found
+[2020/02/11 22:27:59][INFO][search]  Building PrivilegeRequestModel
+[2020/02/11 22:27:59][INFO][search]  Built Successful...
+[2020/02/11 22:27:59][INFO][search]  Sendng Request Model to http://0.0.0.0:1521/api/idmprivilege
+[2020/02/11 22:27:59][INFO][makePost]  Building client ...
+[2020/02/11 22:27:59][INFO][makePost]  Building WebTargethttp://0.0.0.0:1521/api/idm/privilege
+[2020/02/11 22:27:59][INFO][makePost]  Starting invocation builder ..
+[2020/02/11 22:27:59][INFO][makePost]  Sending request ... 
+[2020/02/11 22:27:59][INFO][makePost]  Request sent.
+[2020/02/11 22:27:59][INFO][makePost]  Recieved status 200
+[2020/02/11 22:27:59][INFO][search]  Creating a builder...
+[2020/02/11 22:27:59][INFO][prepareStatement]  Preparing Statement
+[2020/02/11 22:27:59][INFO][prepareStatement]  Entering parameters
+[2020/02/11 22:27:59][INFO][prepareStatement]  Query ready
+com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT 
+       M.movie_id,
+       title, 
+       year, 
+       P.name, 
+       rating, 
+       backdrop_path, 
+       poster_path, 
+       hidden
+       FROM movie AS M
+       INNER JOIN person AS P ON M.director_id = P.person_id
+       INNER JOIN genre_in_movie AS GIM ON M.movie_id = GIM.movie_id
+       INNER JOIN genre AS G ON G.genre_id = GIM.genre_id
+       WHERE 1=1
+       AND P.name LIKE '%chris%' 
+       AND M.hidden = 0
+         ORDER BY M.title asc, M.rating desc
+       LIMIT 10 OFFSET 0
+
+[2020/02/11 22:27:59][INFO][search]  Query was successful ... 
+[2020/02/11 22:27:59][INFO][search]  Extracting query data .. 
+[2020/02/11 22:27:59][INFO][search]  Successfully created a Response with Movies Found

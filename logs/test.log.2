@@ -1,0 +1,1382 @@
+[2020/03/15 14:13:29][CONFIG][initService]  Starting service...
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Scheme: http://
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Port: 12348
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Path: /api/billing
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database hostname: localhost
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database port: 3309
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database username: cs122bg8
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database password provided? true
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database name: cs122bg8
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  IDM Scheme: http://
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  IDM Port: 12346
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  IDM Privilege Path: privilege
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Movies Scheme: http://
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Movies Hostname: 0.0.0.0
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Movies Port: 12347
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Movies Path: /api/movies
+[2020/03/15 14:13:29][CONFIG][currentConfigs]  Movies Thumbnail Path: thumbnail
+[2020/03/15 14:13:29][CONFIG][connectToDatabase]  Connecting to database...
+[2020/03/15 14:13:29][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3309/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/03/15 14:13:30][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3309/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12348/api/billing
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/03/15 14:13:30][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/03/15 14:13:31][CONFIG][initHTTPServer]  HTTP server started.
+[2020/03/15 14:13:31][CONFIG][initService]  Service initialized.
+[2020/03/15 14:13:35][INFO][create]  Built Successful
+[2020/03/15 14:13:35][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:13:35][INFO][makePost]  Building client ..
+[2020/03/15 14:13:35][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:13:35][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:13:35][INFO][makePost]  Sending request ... 
+[2020/03/15 14:13:35][INFO][makePost]  Request sent.
+[2020/03/15 14:13:35][INFO][makePost]  Recieved status 200
+[2020/03/15 14:13:35][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","code":"TESTCODE","discount":0.5,"sale_start":"2020-03-15","sale_end":"2020-03-16","limit":2}
+[2020/03/15 14:13:35][INFO][create]  hello?
+[2020/03/15 14:13:35][INFO][create]  hello?
+[2020/03/15 14:13:35][INFO][createDiscount]  Building your query ... 
+[2020/03/15 14:13:35][INFO][createDiscount]  Query has been built:
+INSERT into discount_code (code, discount, sale_start, sale_end, usage_limit) VALUES (?, ?, ?, ? , ?)
+[2020/03/15 14:13:35][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:13:35][INFO][buildBuilder]  Response being built with Result: DISCOUNT_CREATED
+[2020/03/15 14:14:15][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:14:15][INFO][checkExist]  Building your query
+[2020/03/15 14:14:15][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:14:16][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:14:16][INFO][moviePrice]  Building your query
+[2020/03/15 14:14:16][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:14:16][INFO][moviePrice]  Building your query
+[2020/03/15 14:14:16][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:14:16][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:15:10][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:15:10][INFO][checkExist]  Building your query
+[2020/03/15 14:15:10][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:15:11][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:15:11][INFO][moviePrice]  Building your query
+[2020/03/15 14:15:11][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:15:11][INFO][moviePrice]  Building your query
+[2020/03/15 14:15:11][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:15:11][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:15:24][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:15:24][INFO][checkExist]  Building your query
+[2020/03/15 14:15:24][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:15:24][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:15:24][INFO][moviePrice]  Building your query
+[2020/03/15 14:15:24][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:15:24][INFO][moviePrice]  Building your query
+[2020/03/15 14:15:24][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:15:24][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:16:59][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:16:59][INFO][checkExist]  Building your query
+[2020/03/15 14:16:59][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:16:59][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:16:59][INFO][moviePrice]  Building your query
+[2020/03/15 14:16:59][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:17:00][INFO][moviePrice]  Building your query
+[2020/03/15 14:17:00][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:17:00][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:18:04][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:18:04][INFO][checkExist]  Building your query
+[2020/03/15 14:18:04][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:18:04][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:18:04][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:04][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:04][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:04][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:04][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:18:14][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:18:14][INFO][checkExist]  Building your query
+[2020/03/15 14:18:14][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:18:14][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:18:14][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:14][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:14][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:14][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:14][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:18:31][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:18:31][INFO][checkExist]  Building your query
+[2020/03/15 14:18:31][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:18:31][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:18:31][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:18:31][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:18:31][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:18:32][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:18:32][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:18:32][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:32][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:32][INFO][moviePrice]  Building your query
+[2020/03/15 14:18:32][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:18:32][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:19:12][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:19:12][INFO][checkExist]  Building your query
+[2020/03/15 14:19:12][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:19:12][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:19:12][INFO][moviePrice]  Building your query
+[2020/03/15 14:19:12][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:19:12][INFO][moviePrice]  Building your query
+[2020/03/15 14:19:12][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:19:12][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:20:21][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:20:21][INFO][checkExist]  Building your query
+[2020/03/15 14:20:21][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:20:21][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:20:21][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:20:21][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:20:21][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:20:22][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:20:22][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:20:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:20:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:20:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:20:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:20:22][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:24:29][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:24:29][INFO][checkExist]  Building your query
+[2020/03/15 14:24:29][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:24:29][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:24:29][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:24:29][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:24:29][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:24:30][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:24:30][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:24:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:24:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:24:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:24:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:24:30][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:24:47][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:24:47][INFO][checkExist]  Building your query
+[2020/03/15 14:24:47][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:24:47][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:24:47][INFO][moviePrice]  Building your query
+[2020/03/15 14:24:47][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:24:47][INFO][moviePrice]  Building your query
+[2020/03/15 14:24:47][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:24:47][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:26:17][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:26:17][INFO][checkExist]  Building your query
+[2020/03/15 14:26:17][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:17][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:17][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:17][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:17][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:17][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:17][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:26:23][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:26:23][INFO][checkExist]  Building your query
+[2020/03/15 14:26:23][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:23][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:26:23][INFO][checkExist]  Building your query
+[2020/03/15 14:26:23][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:23][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:23][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:23][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:23][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:23][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:24][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:24][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:24][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:26:24][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:26:24][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:26:24][INFO][applyNewDiscount]  Query has been built:
+INSERT INTO applied_code (email, discount_id, times_used) VALUES (?, (SELECT discount_id FROM discount_code WHERE code = ?), 0)
+[2020/03/15 14:26:24][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:26:24][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:26:24][INFO][updateUserDiscount]  Query has been built:
+UPDATE applied_code SET times_used = ?
+WHERE email = ? AND discount_id = ?
+[2020/03/15 14:26:24][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:24][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:24][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:24][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:24][INFO][buildBuilder]  Response being built with Result: DISCOUNT_APPLIED
+[2020/03/15 14:26:46][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:26:46][INFO][checkExist]  Building your query
+[2020/03/15 14:26:46][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:46][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:26:46][INFO][checkExist]  Building your query
+[2020/03/15 14:26:46][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:46][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:26:46][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:26:46][INFO][updateUserDiscount]  Query has been built:
+UPDATE applied_code SET times_used = ?
+WHERE email = ? AND discount_id = ?
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:46][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:46][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:46][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:46][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:46][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:46][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:46][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:46][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:46][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:46][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:26:46][INFO][buildBuilder]  Response being built with Result: DISCOUNT_APPLIED
+[2020/03/15 14:26:50][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:26:50][INFO][checkExist]  Building your query
+[2020/03/15 14:26:50][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:50][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:26:50][INFO][checkExist]  Building your query
+[2020/03/15 14:26:50][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:50][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:26:50][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:26:50][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:50][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:50][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:50][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:50][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:50][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:50][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:26:54][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:26:54][INFO][checkExist]  Building your query
+[2020/03/15 14:26:54][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:54][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:26:54][INFO][checkExist]  Building your query
+[2020/03/15 14:26:54][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:54][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:54][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:26:54][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:26:54][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:26:54][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:26:54][INFO][moviePrice]  Building your query
+[2020/03/15 14:26:54][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:26:54][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:26:54][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:28:35][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:28:35][INFO][checkExist]  Building your query
+[2020/03/15 14:28:35][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:28:35][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:28:35][INFO][moviePrice]  Building your query
+[2020/03/15 14:28:35][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:28:35][INFO][moviePrice]  Building your query
+[2020/03/15 14:28:35][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:28:35][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:28:40][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:28:40][INFO][checkExist]  Building your query
+[2020/03/15 14:28:40][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:28:40][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:28:40][INFO][checkExist]  Building your query
+[2020/03/15 14:28:40][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:28:40][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:28:40][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:28:40][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:28:40][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:28:40][INFO][moviePrice]  Building your query
+[2020/03/15 14:28:40][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:28:40][INFO][moviePrice]  Building your query
+[2020/03/15 14:28:40][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:28:40][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:30:21][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:30:21][INFO][checkExist]  Building your query
+[2020/03/15 14:30:21][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:30:21][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:30:21][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:30:21][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:30:21][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:30:22][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:30:22][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:30:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:30:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:30:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:30:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:30:22][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:30:28][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:30:28][INFO][checkExist]  Building your query
+[2020/03/15 14:30:28][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:30:28][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:30:28][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:30:28][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:30:28][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:30:29][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:30:29][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:30:29][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:30:29][INFO][checkExist]  Building your query
+[2020/03/15 14:30:29][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:30:29][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:30:29][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:30:29][INFO][moviePrice]  Building your query
+[2020/03/15 14:30:29][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:30:29][INFO][moviePrice]  Building your query
+[2020/03/15 14:30:29][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:30:29][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:31:29][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:31:29][INFO][checkExist]  Building your query
+[2020/03/15 14:31:29][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:31:29][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:31:29][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:31:29][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:31:29][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:31:29][INFO][checkExist]  Building your query
+[2020/03/15 14:31:29][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:31:30][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:31:30][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:31:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:31:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:31:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:31:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:31:30][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:32:48][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:32:48][INFO][checkExist]  Building your query
+[2020/03/15 14:32:48][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:32:48][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:32:48][INFO][moviePrice]  Building your query
+[2020/03/15 14:32:48][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:32:48][INFO][moviePrice]  Building your query
+[2020/03/15 14:32:48][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:32:48][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:32:51][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:32:51][INFO][checkExist]  Building your query
+[2020/03/15 14:32:51][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:32:51][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:32:51][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:32:51][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:32:51][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:33:21][INFO][create]  Built Successful
+[2020/03/15 14:33:21][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:33:21][INFO][makePost]  Building client ..
+[2020/03/15 14:33:21][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:33:21][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:33:21][INFO][makePost]  Sending request ... 
+[2020/03/15 14:33:21][INFO][makePost]  Request sent.
+[2020/03/15 14:33:21][INFO][makePost]  Recieved status 200
+[2020/03/15 14:33:21][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","code":"SOMECODE","discount":0.5,"sale_start":"2020-03-15","sale_end":"2020-03-16","limit":2}
+[2020/03/15 14:33:21][INFO][create]  hello?
+[2020/03/15 14:33:21][INFO][create]  hello?
+[2020/03/15 14:33:21][INFO][createDiscount]  Building your query ... 
+[2020/03/15 14:33:21][INFO][createDiscount]  Query has been built:
+INSERT into discount_code (code, discount, sale_start, sale_end, usage_limit) VALUES (?, ?, ?, ? , ?)
+[2020/03/15 14:33:21][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:33:21][INFO][buildBuilder]  Response being built with Result: DISCOUNT_CREATED
+[2020/03/15 14:33:25][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:33:25][INFO][checkExist]  Building your query
+[2020/03/15 14:33:25][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:33:25][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:33:25][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:25][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:25][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:25][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:25][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:33:30][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"SOMECODE"}
+[2020/03/15 14:33:30][INFO][checkExist]  Building your query
+[2020/03/15 14:33:30][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:33:30][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:33:30][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:33:30][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:33:30][INFO][applyNewDiscount]  Query has been built:
+INSERT INTO applied_code (email, discount_id, times_used) VALUES (?, (SELECT discount_id FROM discount_code WHERE code = ?), 0)
+[2020/03/15 14:33:30][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:33:30][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:33:30][INFO][updateUserDiscount]  Query has been built:
+UPDATE applied_code SET times_used = ?
+WHERE email = ? AND discount_id = ?
+[2020/03/15 14:33:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:30][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:30][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:30][INFO][buildBuilder]  Response being built with Result: DISCOUNT_APPLIED
+[2020/03/15 14:33:52][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:33:52][INFO][checkExist]  Building your query
+[2020/03/15 14:33:52][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:33:52][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:33:52][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:52][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:52][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:52][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:53][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:33:58][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"SOMECODE"}
+[2020/03/15 14:33:58][INFO][checkExist]  Building your query
+[2020/03/15 14:33:58][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:33:58][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:33:58][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:33:58][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:33:58][INFO][updateUserDiscount]  Query has been built:
+UPDATE applied_code SET times_used = ?
+WHERE email = ? AND discount_id = ?
+[2020/03/15 14:33:58][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:58][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:58][INFO][moviePrice]  Building your query
+[2020/03/15 14:33:58][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:33:59][INFO][buildBuilder]  Response being built with Result: DISCOUNT_APPLIED
+[2020/03/15 14:36:11][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:36:11][INFO][checkExist]  Building your query
+[2020/03/15 14:36:11][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:36:11][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:36:11][INFO][moviePrice]  Building your query
+[2020/03/15 14:36:11][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:36:12][INFO][moviePrice]  Building your query
+[2020/03/15 14:36:12][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:36:12][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:36:15][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","discount_code":"TESTCODE"}
+[2020/03/15 14:36:15][INFO][checkExist]  Building your query
+[2020/03/15 14:36:15][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:36:16][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:36:16][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:36:16][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:36:16][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED
+[2020/03/15 14:42:17][INFO][create]  Built Successful
+[2020/03/15 14:42:17][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:42:17][INFO][makePost]  Building client ..
+[2020/03/15 14:42:17][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:42:17][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:42:17][INFO][makePost]  Sending request ... 
+[2020/03/15 14:42:17][INFO][makePost]  Request sent.
+[2020/03/15 14:42:17][INFO][makePost]  Recieved status 200
+[2020/03/15 14:42:17][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:42:17][INFO][buildBuilder]  Response being built with Result: DISCOUNT_FAIL
+[2020/03/15 14:42:41][INFO][create]  Built Successful
+[2020/03/15 14:42:41][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:42:41][INFO][makePost]  Building client ..
+[2020/03/15 14:42:41][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:42:41][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:42:41][INFO][makePost]  Sending request ... 
+[2020/03/15 14:42:41][INFO][makePost]  Request sent.
+[2020/03/15 14:42:41][INFO][makePost]  Recieved status 200
+[2020/03/15 14:42:41][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","code":"BLACKFRIDAY","discount":0.4,"sale_start":"2020-03-15","sale_end":"2020-03-16","limit":1}
+[2020/03/15 14:42:41][INFO][create]  hello?
+[2020/03/15 14:42:41][INFO][create]  hello?
+[2020/03/15 14:42:41][INFO][createDiscount]  Building your query ... 
+[2020/03/15 14:42:41][INFO][createDiscount]  Query has been built:
+INSERT into discount_code (code, discount, sale_start, sale_end, usage_limit) VALUES (?, ?, ?, ? , ?)
+[2020/03/15 14:42:41][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:42:41][INFO][buildBuilder]  Response being built with Result: DISCOUNT_CREATED
+[2020/03/15 14:43:18][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","movie_id":"tt0313911","quantity":"10"}
+[2020/03/15 14:43:18][INFO][insert]  Built Successful
+[2020/03/15 14:43:18][INFO][insert]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:43:18][INFO][makePost]  Building client ..
+[2020/03/15 14:43:18][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:43:18][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:43:18][INFO][makePost]  Sending request ... 
+[2020/03/15 14:43:18][INFO][makePost]  Request sent.
+[2020/03/15 14:43:18][INFO][makePost]  Recieved status 200
+[2020/03/15 14:43:18][INFO][checkExist]  Building your query
+[2020/03/15 14:43:18][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ? AND movie_id = ?
+[2020/03/15 14:43:18][INFO][insert]  Inserting item into your shopping cart ..
+[2020/03/15 14:43:18][INFO][insert]  Building your query
+[2020/03/15 14:43:18][INFO][insert]  Query has been built:
+ INSERT INTO cart (email, movie_id, quantity) VALUES (? , ? , ?)
+[2020/03/15 14:43:19][INFO][insert]  Completed task
+[2020/03/15 14:43:19][INFO][buildBuilder]  Response being built with Result: INSERT_SUCCESSFUL
+[2020/03/15 14:43:22][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:43:22][INFO][checkExist]  Building your query
+[2020/03/15 14:43:22][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:43:22][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:43:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:22][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:22][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:22][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:43:34][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:43:34][INFO][checkExist]  Building your query
+[2020/03/15 14:43:34][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:43:34][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:43:34][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:34][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:34][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:34][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:34][INFO][moviePrice]  Building your query
+[2020/03/15 14:43:34][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:43:34][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:44:19][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:44:19][INFO][checkExist]  Building your query
+[2020/03/15 14:44:19][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:44:19][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:44:19][INFO][moviePrice]  Building your query
+[2020/03/15 14:44:19][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:44:19][INFO][moviePrice]  Building your query
+[2020/03/15 14:44:19][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:44:20][INFO][moviePrice]  Building your query
+[2020/03/15 14:44:20][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:44:20][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:44:23][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","movie_id":"tt0313911"}
+[2020/03/15 14:44:23][INFO][delete]  did we make it out?
+[2020/03/15 14:44:23][INFO][delete]  email: aesmeral@uci.edu
+[2020/03/15 14:44:23][INFO][checkExist]  Building your query
+[2020/03/15 14:44:23][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ? AND movie_id = ?
+[2020/03/15 14:44:23][INFO][delete]  Building your query
+[2020/03/15 14:44:23][INFO][delete]  Query has been built:
+ DELETE FROM cart WHERE email = ? AND movie_id = ?
+[2020/03/15 14:44:23][INFO][buildBuilder]  Response being built with Result: DELETE_SUCCESSFUL
+[2020/03/15 14:44:25][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu"}
+[2020/03/15 14:44:25][INFO][checkExist]  Building your query
+[2020/03/15 14:44:25][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:44:25][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:44:25][INFO][moviePrice]  Building your query
+[2020/03/15 14:44:25][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:44:25][INFO][moviePrice]  Building your query
+[2020/03/15 14:44:25][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:44:25][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:44:43][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com"}
+[2020/03/15 14:44:43][INFO][checkExist]  Building your query
+[2020/03/15 14:44:43][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:44:43][INFO][buildBuilder]  Response being built with Result: CART_NO_EXIST
+[2020/03/15 14:45:13][INFO][create]  Built Successful
+[2020/03/15 14:45:13][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:45:13][INFO][makePost]  Building client ..
+[2020/03/15 14:45:13][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:45:13][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:45:13][INFO][makePost]  Sending request ... 
+[2020/03/15 14:45:13][INFO][makePost]  Request sent.
+[2020/03/15 14:45:13][INFO][makePost]  Recieved status 200
+[2020/03/15 14:45:13][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:45:13][INFO][buildBuilder]  Response being built with Result: DISCOUNT_FAIL
+[2020/03/15 14:45:41][INFO][create]  Built Successful
+[2020/03/15 14:45:41][INFO][create]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:45:41][INFO][makePost]  Building client ..
+[2020/03/15 14:45:41][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:45:41][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:45:41][INFO][makePost]  Sending request ... 
+[2020/03/15 14:45:41][INFO][makePost]  Request sent.
+[2020/03/15 14:45:41][INFO][makePost]  Recieved status 200
+[2020/03/15 14:45:41][INFO][modelMapper]  Mapping object from String: {"email":"aesmeral@uci.edu","code":"BLACKFRIDAY","discount":0.5,"sale_start":"2020-03-15","sale_end":"2020-03-16","limit":1}
+[2020/03/15 14:45:41][INFO][create]  hello?
+[2020/03/15 14:45:41][INFO][create]  hello?
+[2020/03/15 14:45:41][INFO][createDiscount]  Building your query ... 
+[2020/03/15 14:45:41][INFO][createDiscount]  Query has been built:
+INSERT into discount_code (code, discount, sale_start, sale_end, usage_limit) VALUES (?, ?, ?, ? , ?)
+[2020/03/15 14:45:41][INFO][create]  Successfully Created a Discount
+[2020/03/15 14:45:41][INFO][buildBuilder]  Response being built with Result: DISCOUNT_CREATED
+[2020/03/15 14:46:09][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","movie_id":"tt0337812","quantity":"10"}
+[2020/03/15 14:46:09][INFO][insert]  Built Successful
+[2020/03/15 14:46:09][INFO][insert]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:46:09][INFO][makePost]  Building client ..
+[2020/03/15 14:46:09][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:46:09][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:46:09][INFO][makePost]  Sending request ... 
+[2020/03/15 14:46:10][INFO][makePost]  Request sent.
+[2020/03/15 14:46:10][INFO][makePost]  Recieved status 200
+[2020/03/15 14:46:10][INFO][checkExist]  Building your query
+[2020/03/15 14:46:10][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ? AND movie_id = ?
+[2020/03/15 14:46:10][INFO][insert]  Inserting item into your shopping cart ..
+[2020/03/15 14:46:10][INFO][insert]  Building your query
+[2020/03/15 14:46:10][INFO][insert]  Query has been built:
+ INSERT INTO cart (email, movie_id, quantity) VALUES (? , ? , ?)
+[2020/03/15 14:46:10][INFO][insert]  Completed task
+[2020/03/15 14:46:10][INFO][buildBuilder]  Response being built with Result: INSERT_SUCCESSFUL
+[2020/03/15 14:46:14][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com"}
+[2020/03/15 14:46:14][INFO][checkExist]  Building your query
+[2020/03/15 14:46:14][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:46:14][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:46:14][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:46:14][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:46:14][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:46:15][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:46:15][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:46:15][INFO][moviePrice]  Building your query
+[2020/03/15 14:46:15][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:46:15][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:46:39][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","discount_code":"ehhinvalid"}
+[2020/03/15 14:46:39][INFO][checkExist]  Building your query
+[2020/03/15 14:46:39][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:46:39][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:46:39][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:46:39][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:46:39][INFO][applyNewDiscount]  Query has been built:
+INSERT INTO applied_code (email, discount_id, times_used) VALUES (?, (SELECT discount_id FROM discount_code WHERE code = ?), 0)
+[2020/03/15 14:46:39][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:46:39][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:46:39][INFO][buildBuilder]  Response being built with Result: DISCOUNT_UNABLE
+[2020/03/15 14:47:00][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","discount_code":"BLACKFRIDAY"}
+[2020/03/15 14:47:00][INFO][checkExist]  Building your query
+[2020/03/15 14:47:00][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:47:00][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:47:00][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:47:00][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:47:00][INFO][applyNewDiscount]  Query has been built:
+INSERT INTO applied_code (email, discount_id, times_used) VALUES (?, (SELECT discount_id FROM discount_code WHERE code = ?), 0)
+[2020/03/15 14:47:00][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:47:00][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:47:00][INFO][updateUserDiscount]  Query has been built:
+UPDATE applied_code SET times_used = ?
+WHERE email = ? AND discount_id = ?
+[2020/03/15 14:47:00][INFO][moviePrice]  Building your query
+[2020/03/15 14:47:00][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:47:01][INFO][buildBuilder]  Response being built with Result: DISCOUNT_APPLIED
+[2020/03/15 14:47:22][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","movie_id":"tt0337812"}
+[2020/03/15 14:47:22][INFO][delete]  did we make it out?
+[2020/03/15 14:47:22][INFO][delete]  email: newuser1@gmail.com
+[2020/03/15 14:47:22][INFO][checkExist]  Building your query
+[2020/03/15 14:47:22][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ? AND movie_id = ?
+[2020/03/15 14:47:22][INFO][delete]  Building your query
+[2020/03/15 14:47:22][INFO][delete]  Query has been built:
+ DELETE FROM cart WHERE email = ? AND movie_id = ?
+[2020/03/15 14:47:22][INFO][buildBuilder]  Response being built with Result: DELETE_SUCCESSFUL
+[2020/03/15 14:47:23][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com"}
+[2020/03/15 14:47:23][INFO][checkExist]  Building your query
+[2020/03/15 14:47:23][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:47:23][INFO][buildBuilder]  Response being built with Result: CART_NO_EXIST
+[2020/03/15 14:47:36][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","movie_id":"tt4154796","quantity":1}
+[2020/03/15 14:47:36][INFO][insert]  Built Successful
+[2020/03/15 14:47:37][INFO][insert]  Sending Request Model to http://0.0.0.0:12346/api/idmprivilege
+[2020/03/15 14:47:37][INFO][makePost]  Building client ..
+[2020/03/15 14:47:37][INFO][makePost]  Building WebTarget http://0.0.0.0:12346/api/idm/privilege
+[2020/03/15 14:47:37][INFO][makePost]  Starting invocation builder ..
+[2020/03/15 14:47:37][INFO][makePost]  Sending request ... 
+[2020/03/15 14:47:37][INFO][makePost]  Request sent.
+[2020/03/15 14:47:37][INFO][makePost]  Recieved status 200
+[2020/03/15 14:47:37][INFO][checkExist]  Building your query
+[2020/03/15 14:47:37][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ? AND movie_id = ?
+[2020/03/15 14:47:37][INFO][insert]  Inserting item into your shopping cart ..
+[2020/03/15 14:47:37][INFO][insert]  Building your query
+[2020/03/15 14:47:37][INFO][insert]  Query has been built:
+ INSERT INTO cart (email, movie_id, quantity) VALUES (? , ? , ?)
+[2020/03/15 14:47:37][INFO][insert]  Completed task
+[2020/03/15 14:47:37][INFO][buildBuilder]  Response being built with Result: INSERT_SUCCESSFUL
+[2020/03/15 14:47:41][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com"}
+[2020/03/15 14:47:41][INFO][checkExist]  Building your query
+[2020/03/15 14:47:41][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:47:41][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:47:41][INFO][moviePrice]  Building your query
+[2020/03/15 14:47:41][INFO][moviePrice]  Query has been built:
+SELECT MP.unit_price, MP.discount, C.quantity
+FROM cart AS C
+INNER JOIN movie_price AS MP ON MP.movie_id = C.movie_id
+WHERE C.movie_id = ? AND C.email = ?
+[2020/03/15 14:47:42][INFO][buildBuilder]  Response being built with Result: RETRIEVE_SUCCESSFUL
+[2020/03/15 14:47:45][INFO][modelMapper]  Mapping object from String: {"email":"newuser1@gmail.com","discount_code":"BLACKFRIDAY"}
+[2020/03/15 14:47:45][INFO][checkExist]  Building your query
+[2020/03/15 14:47:45][INFO][checkExist]  Query has been built:
+ SELECT DISTINCT *
+FROM cart
+WHERE email = ?
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Building client ..
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Building WebTarget http://0.0.0.0:12347/api/movies/thumbnail
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Starting invocation builder ..
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Sending request ... 
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Request sent.
+[2020/03/15 14:47:45][INFO][thumbnailMakePost]  Recieved status 200
+[2020/03/15 14:47:45][INFO][applyDiscount]  Building your query ... 
+[2020/03/15 14:47:45][INFO][applyDiscount]  Query has been built:
+SELECT AC.email, AC.discount_id, AC.times_used, DC.discount, DC.usage_limit, DC.sale_end
+FROM applied_code AS AC
+INNER JOIN discount_code AS DC ON DC.discount_id = AC.discount_id
+WHERE DC.code = ?
+AND AC.email = ?
+[2020/03/15 14:47:45][INFO][buildBuilder]  Response being built with Result: DISCOUNT_EXCEEDED

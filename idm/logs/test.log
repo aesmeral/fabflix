@@ -1,0 +1,1305 @@
+[2020/02/11 21:09:07][CONFIG][initService]  Starting service...
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Scheme: http://
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Port: 1521
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Path: /api/idm
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database hostname: localhost
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database port: 3307
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database username: cs122bg8
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database password provided? true
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database name: cs122bg8
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Timeout: 600000
+[2020/02/11 21:09:07][CONFIG][currentConfigs]  Expiration: 1800000
+[2020/02/11 21:09:07][CONFIG][connectToDatabase]  Connecting to database...
+[2020/02/11 21:09:07][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:07][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3307/cs122bg8?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:1521/api/idm
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Set session timeout and token expiration.
+[2020/02/11 21:09:07][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/02/11 21:09:08][CONFIG][initHTTPServer]  HTTP server started.
+[2020/02/11 21:09:08][CONFIG][initService]  Service initialized.
+[2020/02/11 21:11:26][INFO][login]  Received post request
+[2020/02/11 21:11:26][INFO][login]  Request:
+{"email":"testemail2@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 21:11:26][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:11:26][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:11:26][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:11:26][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0b764afb4108d59516a9275332ac2e711242ba4098d595a36e14bbe284ae9bd6e68aaea893541573c414c308b8558ffba9d4b97f6ca3229594151ab149b5a773';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0c4d9556bb0e6a145fd01625fdb2dedd22fdcaf5c649e4b5685072e0881112011eabdf142baa720b30140f52607269063a34b5c170078dd262e033946294ec25';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f778cefa758bcd5d4c1a3bec1aaefc7daa386f5f76aeb2bb0f1a58fcbecd91675e8ed171e3df26915f8a4baab51858b9bd8283b8b9e9f68a7bb0649e24430f2';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1533583a12b1268e3acd9b2187c312f626f72fd713f2f056617af10bd742843c549ab62e2e9931d625e361b513810cb3faedd7e9e749191105897987e6c288df';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1c0b90fc31e7cfaf28d56f61bcbc440537a4d02a0b0244afc375ca88ccd9363b1a797b16be2fc3641f8052ea3ffb3699ee9f02f03375bd2741b6b680cce4fd37';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '35f307f2be9314ab38d4adfc6dfe10cf1a7a11123471eca1c885173e761afd72d5e9fe1866b283d0821644aaf4b7eeca32ca991ebdf1eb6f92cbd0ce86fd56f3';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '39be2945692b6e54511ba5a7263abeb747071d5cefda4ba323e7fecb5da0ca27afacf0929b2928ee3f2e8707d9f18bcfb196a88639950a36a0663387c3460880';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4a814b4dddf390224ff686f8e12a10a1f4f607fe6e69fbabeeeab0e44ccb4d056c9b668046796dcb77ad933d84e619e5f532ac7de33f230e87ed54b2ca346635';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '517d0bf8d89a4c011d35bfb90c47ec0319165e652c1da11631a8a768e39aee0fcf54f9b993331433f6e3d5e022d9814e9696bcc3bdb88b4087df9986e37c1fe1';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '594394f0b6252c5fb603795887de82e3eb4c57edbc317f8896206ab8169c7db3eda04cd841fc3749bee31d628b03f47c6e41d86afd2cd0dc865ae5cbf3543c28';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5ade7787a81ad4973fcd0ea0fadb1e6fc4a0c70326a6c7837cb0ed8f5a9b5cf243f0d17a9ea4fef7365bb02ee7f36e8782e7d49d40c04f29dc3a079aab9e6702';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '609511c48c55f54a3b6f7ab56df9c0683d5dfee6ab1d87f41375fa00ee25c7a00af7115ed733fa76b71ad0f4070743dc1b73d0285917c0f8533a0f0223f7aa28';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '758331436ddca94a57edd0a00c97af1978b85f9c3a88236015c6618cbc2081cd77f989bf2bf61233df6c4dfb5c811d49505fde3893a5ee77ec3751107011df77';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '8d7e23413310ba84115bdbaef412412543c6cd1eea1f2e6a88265c716a245415082cce3b3e74b31afff8691169835aa5e812712495f5c0026d7e6bcfd5fbfa2c';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a3ecb3d9272014104915e63325b0012ee2e49450b498aefdab62fb1f8e31e64b264f74f1056c4d9b97f7c2fa920eb288adbf2a5d495eb706862b1ab6c125d1e8';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a9029e2525c572da39bdeb98808498902c3d202299ddd80759d4b616456627b5eb66ae2e6726f348cef7f87a2981a27891d3452ee0434a00c22a72424a9aa28f';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ac21515d105d929b50e9a8b2762f07c2c498559976be8504f6d9685fdf4dbca4efb7ad2e8f0fb817c69dd70a2f275d240d43bdcdc1e9dd046b87c6ee30f248dc';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b10b20e4eef4ca60f057e4713829d57e4e4fd2c663410f92d2e11caf13403ce35fcc53ba0904587a6c77710d770a2c88a83de817dbd1c740c30e2a6eb4a4576d';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b4d1ebb95e933a743047fce667d778d99856e5c5f5f23a0e7ed3bcbd2b11919dffac2796066ccbb48e2f714a1f80a67ea4a9bdc3fa9be5afb06350e585e5ed95';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b7d6670329577700d592f499a30f53d593e26e9b3faae69a58cb2b55796a210179ea9d7c9be5d5d4b35e109ff1edbe97d145a3b55f53cfdf730ff7a1c16afc21';
+[2020/02/11 21:11:26][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:26][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'bb9cee04a710670db78999b7d48257f4dcf12ebe71e75d5cead2d92aeef892fe93943f5007974f5da59f259bc5f24425a501579e01ceed71c53ca393e12fbf34';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'be85bf20080d383d09cdf221e355748a85624f711d1f49bb6a755ec02dc156b1f3fe6c98f7cd35053f1a1b9621ce89ea53a4f330096de924bb349c0f24333c41';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c295efb9525383253fb79293c73fb3092424eff21629eb3e98b7f806b456c1367766d285791196f3789ef33bb7565b18d5c01cdcc7d8daa2f0f000cc34a0e171';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5f714b15a49ca682093ab3f53030892d5ce0f9bbcdbf3180258fbb6c9f0f27096a0fa5a15780b72e9bba19d7602a507ca9e22eda22e2d023ed50e478dd69aad';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6b81c60b45ba368b6a1ee3d4c263f5457aa379591a6a6a65ddcc5cba9b15d81e9ce5814d1128dd01391b6dda69baaa86439c65b379baea5fcb81bddbabef6fe';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6ff2e5da9721a9105e9f93102fff05048dd4b5b4804b8b2fe9a53d0efdedafed09cce25383d2a7a06b3aa98708d56cda51ee81215e348dac1727e5926114551';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'db982258deb741af2ec4471832843f4c71602d3a8b3cbf1d8dfc49f109dd202fc4c887fcaee2635101b02d85f80122df84bf822d1fc44bc75461e6a1367c4764';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'eb9620c583ef6e8390d78d03da60a4c4a30438d2e1f6ce9f007054d20de62ae00e4e9a89568e5c51d1cf162f3eadf871ead3d941adf39980c40162da1b3bbb03';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ec739b9e1a2055450a074ebf16d2d45bbcd45691da045e5593c80e6a307ad06936cabe71068098d714e39e2e5904c6b124cfb84758645f6005308f38b25f69ed';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f132b1ddd47a7c9e33bf570e22ac91772d65e83a9253ab2a4e9214a1f35851959c4a1635dc60d05b11c08e49ed7c82111d051acce92006bd30aaa190f9a59a16';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f4af314a661b3432ad4e0989815738f68b1539efca19accb780385ccad1a0991bea97363535104ce68e8a74dcc917d1873fb8e7c9e68e1c5d27a51414bb1cab7';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8756a4e5ecadf1f0813d46bef350f850cf36dae2c2b1042a875f78ddb5a2baa9d0bef6c613c72d2e2c8af6935038b6aa91f169baed13912a6c97a6703afca82';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8f57df189d0deec4de805469a45c68384b984937e7d1dc1d3fe9d0d3bf6924f0f5edb3f8cdbfae91c0e8fae15b1279a0397123059023cb6b82e6a36677c4443';
+[2020/02/11 21:11:27][INFO][updateSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('9d2d597ece13b0ef00216848265af8a020e5d95e6a28db2b446695a57d743da1ad064d5c06d23ce3add066cd1d66a6b1ff966e3e23ada7e3e9c886c6c1aa01cb','testemail2@uci.edu',1,'2020-02-11 21:11:26.634','2020-02-11 21:11:26.634','2020-02-11 21:41:26.634')
+[2020/02/11 21:11:27][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 21:11:27][INFO][login]  User logged in successfully.
+[2020/02/11 21:11:31][INFO][privilege]  Received post request
+[2020/02/11 21:11:31][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:11:31][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:11:31][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:11:31][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:11:31][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:11:51][INFO][privilege]  Received post request
+[2020/02/11 21:11:51][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:11:51][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:11:51][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:11:51][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:11:51][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:12:38][INFO][privilege]  Received post request
+[2020/02/11 21:12:38][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:12:38][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:12:38][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:12:38][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:12:38][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:13:59][INFO][login]  Received post request
+[2020/02/11 21:13:59][INFO][login]  Request:
+{"email":"testemail2@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 21:13:59][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:13:59][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:13:59][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:13:59][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0b764afb4108d59516a9275332ac2e711242ba4098d595a36e14bbe284ae9bd6e68aaea893541573c414c308b8558ffba9d4b97f6ca3229594151ab149b5a773';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0c4d9556bb0e6a145fd01625fdb2dedd22fdcaf5c649e4b5685072e0881112011eabdf142baa720b30140f52607269063a34b5c170078dd262e033946294ec25';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f778cefa758bcd5d4c1a3bec1aaefc7daa386f5f76aeb2bb0f1a58fcbecd91675e8ed171e3df26915f8a4baab51858b9bd8283b8b9e9f68a7bb0649e24430f2';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1533583a12b1268e3acd9b2187c312f626f72fd713f2f056617af10bd742843c549ab62e2e9931d625e361b513810cb3faedd7e9e749191105897987e6c288df';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1c0b90fc31e7cfaf28d56f61bcbc440537a4d02a0b0244afc375ca88ccd9363b1a797b16be2fc3641f8052ea3ffb3699ee9f02f03375bd2741b6b680cce4fd37';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '35f307f2be9314ab38d4adfc6dfe10cf1a7a11123471eca1c885173e761afd72d5e9fe1866b283d0821644aaf4b7eeca32ca991ebdf1eb6f92cbd0ce86fd56f3';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '39be2945692b6e54511ba5a7263abeb747071d5cefda4ba323e7fecb5da0ca27afacf0929b2928ee3f2e8707d9f18bcfb196a88639950a36a0663387c3460880';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4a814b4dddf390224ff686f8e12a10a1f4f607fe6e69fbabeeeab0e44ccb4d056c9b668046796dcb77ad933d84e619e5f532ac7de33f230e87ed54b2ca346635';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '517d0bf8d89a4c011d35bfb90c47ec0319165e652c1da11631a8a768e39aee0fcf54f9b993331433f6e3d5e022d9814e9696bcc3bdb88b4087df9986e37c1fe1';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '594394f0b6252c5fb603795887de82e3eb4c57edbc317f8896206ab8169c7db3eda04cd841fc3749bee31d628b03f47c6e41d86afd2cd0dc865ae5cbf3543c28';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5ade7787a81ad4973fcd0ea0fadb1e6fc4a0c70326a6c7837cb0ed8f5a9b5cf243f0d17a9ea4fef7365bb02ee7f36e8782e7d49d40c04f29dc3a079aab9e6702';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '609511c48c55f54a3b6f7ab56df9c0683d5dfee6ab1d87f41375fa00ee25c7a00af7115ed733fa76b71ad0f4070743dc1b73d0285917c0f8533a0f0223f7aa28';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '758331436ddca94a57edd0a00c97af1978b85f9c3a88236015c6618cbc2081cd77f989bf2bf61233df6c4dfb5c811d49505fde3893a5ee77ec3751107011df77';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '8d7e23413310ba84115bdbaef412412543c6cd1eea1f2e6a88265c716a245415082cce3b3e74b31afff8691169835aa5e812712495f5c0026d7e6bcfd5fbfa2c';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9d2d597ece13b0ef00216848265af8a020e5d95e6a28db2b446695a57d743da1ad064d5c06d23ce3add066cd1d66a6b1ff966e3e23ada7e3e9c886c6c1aa01cb';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a3ecb3d9272014104915e63325b0012ee2e49450b498aefdab62fb1f8e31e64b264f74f1056c4d9b97f7c2fa920eb288adbf2a5d495eb706862b1ab6c125d1e8';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a9029e2525c572da39bdeb98808498902c3d202299ddd80759d4b616456627b5eb66ae2e6726f348cef7f87a2981a27891d3452ee0434a00c22a72424a9aa28f';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ac21515d105d929b50e9a8b2762f07c2c498559976be8504f6d9685fdf4dbca4efb7ad2e8f0fb817c69dd70a2f275d240d43bdcdc1e9dd046b87c6ee30f248dc';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b10b20e4eef4ca60f057e4713829d57e4e4fd2c663410f92d2e11caf13403ce35fcc53ba0904587a6c77710d770a2c88a83de817dbd1c740c30e2a6eb4a4576d';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b4d1ebb95e933a743047fce667d778d99856e5c5f5f23a0e7ed3bcbd2b11919dffac2796066ccbb48e2f714a1f80a67ea4a9bdc3fa9be5afb06350e585e5ed95';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b7d6670329577700d592f499a30f53d593e26e9b3faae69a58cb2b55796a210179ea9d7c9be5d5d4b35e109ff1edbe97d145a3b55f53cfdf730ff7a1c16afc21';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'bb9cee04a710670db78999b7d48257f4dcf12ebe71e75d5cead2d92aeef892fe93943f5007974f5da59f259bc5f24425a501579e01ceed71c53ca393e12fbf34';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'be85bf20080d383d09cdf221e355748a85624f711d1f49bb6a755ec02dc156b1f3fe6c98f7cd35053f1a1b9621ce89ea53a4f330096de924bb349c0f24333c41';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c295efb9525383253fb79293c73fb3092424eff21629eb3e98b7f806b456c1367766d285791196f3789ef33bb7565b18d5c01cdcc7d8daa2f0f000cc34a0e171';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5f714b15a49ca682093ab3f53030892d5ce0f9bbcdbf3180258fbb6c9f0f27096a0fa5a15780b72e9bba19d7602a507ca9e22eda22e2d023ed50e478dd69aad';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6b81c60b45ba368b6a1ee3d4c263f5457aa379591a6a6a65ddcc5cba9b15d81e9ce5814d1128dd01391b6dda69baaa86439c65b379baea5fcb81bddbabef6fe';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6ff2e5da9721a9105e9f93102fff05048dd4b5b4804b8b2fe9a53d0efdedafed09cce25383d2a7a06b3aa98708d56cda51ee81215e348dac1727e5926114551';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'db982258deb741af2ec4471832843f4c71602d3a8b3cbf1d8dfc49f109dd202fc4c887fcaee2635101b02d85f80122df84bf822d1fc44bc75461e6a1367c4764';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'eb9620c583ef6e8390d78d03da60a4c4a30438d2e1f6ce9f007054d20de62ae00e4e9a89568e5c51d1cf162f3eadf871ead3d941adf39980c40162da1b3bbb03';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ec739b9e1a2055450a074ebf16d2d45bbcd45691da045e5593c80e6a307ad06936cabe71068098d714e39e2e5904c6b124cfb84758645f6005308f38b25f69ed';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f132b1ddd47a7c9e33bf570e22ac91772d65e83a9253ab2a4e9214a1f35851959c4a1635dc60d05b11c08e49ed7c82111d051acce92006bd30aaa190f9a59a16';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f4af314a661b3432ad4e0989815738f68b1539efca19accb780385ccad1a0991bea97363535104ce68e8a74dcc917d1873fb8e7c9e68e1c5d27a51414bb1cab7';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8756a4e5ecadf1f0813d46bef350f850cf36dae2c2b1042a875f78ddb5a2baa9d0bef6c613c72d2e2c8af6935038b6aa91f169baed13912a6c97a6703afca82';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8f57df189d0deec4de805469a45c68384b984937e7d1dc1d3fe9d0d3bf6924f0f5edb3f8cdbfae91c0e8fae15b1279a0397123059023cb6b82e6a36677c4443';
+[2020/02/11 21:13:59][INFO][updateSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('108f8fd167f5767a5c4b0bc691ba941f7bfc7a9b17f71cc0afb07b9d6abaebce45f8687d0bf03f121569a8a5bbdb5e224edb7eb4a48a92b711c77dc0005bc4df','testemail2@uci.edu',1,'2020-02-11 21:13:59.26','2020-02-11 21:13:59.26','2020-02-11 21:43:59.26')
+[2020/02/11 21:13:59][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 21:13:59][INFO][login]  User logged in successfully.
+[2020/02/11 21:14:12][INFO][privilege]  Received post request
+[2020/02/11 21:14:12][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:14:12][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:14:12][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:14:12][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:14:12][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:20:19][INFO][login]  Received post request
+[2020/02/11 21:20:19][INFO][login]  Request:
+{"email":"testemail2@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 21:20:19][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:20:19][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:20:19][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:20:19][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0b764afb4108d59516a9275332ac2e711242ba4098d595a36e14bbe284ae9bd6e68aaea893541573c414c308b8558ffba9d4b97f6ca3229594151ab149b5a773';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0c4d9556bb0e6a145fd01625fdb2dedd22fdcaf5c649e4b5685072e0881112011eabdf142baa720b30140f52607269063a34b5c170078dd262e033946294ec25';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f778cefa758bcd5d4c1a3bec1aaefc7daa386f5f76aeb2bb0f1a58fcbecd91675e8ed171e3df26915f8a4baab51858b9bd8283b8b9e9f68a7bb0649e24430f2';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '108f8fd167f5767a5c4b0bc691ba941f7bfc7a9b17f71cc0afb07b9d6abaebce45f8687d0bf03f121569a8a5bbdb5e224edb7eb4a48a92b711c77dc0005bc4df';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1533583a12b1268e3acd9b2187c312f626f72fd713f2f056617af10bd742843c549ab62e2e9931d625e361b513810cb3faedd7e9e749191105897987e6c288df';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1c0b90fc31e7cfaf28d56f61bcbc440537a4d02a0b0244afc375ca88ccd9363b1a797b16be2fc3641f8052ea3ffb3699ee9f02f03375bd2741b6b680cce4fd37';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '35f307f2be9314ab38d4adfc6dfe10cf1a7a11123471eca1c885173e761afd72d5e9fe1866b283d0821644aaf4b7eeca32ca991ebdf1eb6f92cbd0ce86fd56f3';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '39be2945692b6e54511ba5a7263abeb747071d5cefda4ba323e7fecb5da0ca27afacf0929b2928ee3f2e8707d9f18bcfb196a88639950a36a0663387c3460880';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4a814b4dddf390224ff686f8e12a10a1f4f607fe6e69fbabeeeab0e44ccb4d056c9b668046796dcb77ad933d84e619e5f532ac7de33f230e87ed54b2ca346635';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '517d0bf8d89a4c011d35bfb90c47ec0319165e652c1da11631a8a768e39aee0fcf54f9b993331433f6e3d5e022d9814e9696bcc3bdb88b4087df9986e37c1fe1';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '594394f0b6252c5fb603795887de82e3eb4c57edbc317f8896206ab8169c7db3eda04cd841fc3749bee31d628b03f47c6e41d86afd2cd0dc865ae5cbf3543c28';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5ade7787a81ad4973fcd0ea0fadb1e6fc4a0c70326a6c7837cb0ed8f5a9b5cf243f0d17a9ea4fef7365bb02ee7f36e8782e7d49d40c04f29dc3a079aab9e6702';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '609511c48c55f54a3b6f7ab56df9c0683d5dfee6ab1d87f41375fa00ee25c7a00af7115ed733fa76b71ad0f4070743dc1b73d0285917c0f8533a0f0223f7aa28';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '758331436ddca94a57edd0a00c97af1978b85f9c3a88236015c6618cbc2081cd77f989bf2bf61233df6c4dfb5c811d49505fde3893a5ee77ec3751107011df77';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '8d7e23413310ba84115bdbaef412412543c6cd1eea1f2e6a88265c716a245415082cce3b3e74b31afff8691169835aa5e812712495f5c0026d7e6bcfd5fbfa2c';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9d2d597ece13b0ef00216848265af8a020e5d95e6a28db2b446695a57d743da1ad064d5c06d23ce3add066cd1d66a6b1ff966e3e23ada7e3e9c886c6c1aa01cb';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a3ecb3d9272014104915e63325b0012ee2e49450b498aefdab62fb1f8e31e64b264f74f1056c4d9b97f7c2fa920eb288adbf2a5d495eb706862b1ab6c125d1e8';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a9029e2525c572da39bdeb98808498902c3d202299ddd80759d4b616456627b5eb66ae2e6726f348cef7f87a2981a27891d3452ee0434a00c22a72424a9aa28f';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ac21515d105d929b50e9a8b2762f07c2c498559976be8504f6d9685fdf4dbca4efb7ad2e8f0fb817c69dd70a2f275d240d43bdcdc1e9dd046b87c6ee30f248dc';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b10b20e4eef4ca60f057e4713829d57e4e4fd2c663410f92d2e11caf13403ce35fcc53ba0904587a6c77710d770a2c88a83de817dbd1c740c30e2a6eb4a4576d';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b4d1ebb95e933a743047fce667d778d99856e5c5f5f23a0e7ed3bcbd2b11919dffac2796066ccbb48e2f714a1f80a67ea4a9bdc3fa9be5afb06350e585e5ed95';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b7d6670329577700d592f499a30f53d593e26e9b3faae69a58cb2b55796a210179ea9d7c9be5d5d4b35e109ff1edbe97d145a3b55f53cfdf730ff7a1c16afc21';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'bb9cee04a710670db78999b7d48257f4dcf12ebe71e75d5cead2d92aeef892fe93943f5007974f5da59f259bc5f24425a501579e01ceed71c53ca393e12fbf34';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'be85bf20080d383d09cdf221e355748a85624f711d1f49bb6a755ec02dc156b1f3fe6c98f7cd35053f1a1b9621ce89ea53a4f330096de924bb349c0f24333c41';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c295efb9525383253fb79293c73fb3092424eff21629eb3e98b7f806b456c1367766d285791196f3789ef33bb7565b18d5c01cdcc7d8daa2f0f000cc34a0e171';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5f714b15a49ca682093ab3f53030892d5ce0f9bbcdbf3180258fbb6c9f0f27096a0fa5a15780b72e9bba19d7602a507ca9e22eda22e2d023ed50e478dd69aad';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6b81c60b45ba368b6a1ee3d4c263f5457aa379591a6a6a65ddcc5cba9b15d81e9ce5814d1128dd01391b6dda69baaa86439c65b379baea5fcb81bddbabef6fe';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6ff2e5da9721a9105e9f93102fff05048dd4b5b4804b8b2fe9a53d0efdedafed09cce25383d2a7a06b3aa98708d56cda51ee81215e348dac1727e5926114551';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'db982258deb741af2ec4471832843f4c71602d3a8b3cbf1d8dfc49f109dd202fc4c887fcaee2635101b02d85f80122df84bf822d1fc44bc75461e6a1367c4764';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'eb9620c583ef6e8390d78d03da60a4c4a30438d2e1f6ce9f007054d20de62ae00e4e9a89568e5c51d1cf162f3eadf871ead3d941adf39980c40162da1b3bbb03';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ec739b9e1a2055450a074ebf16d2d45bbcd45691da045e5593c80e6a307ad06936cabe71068098d714e39e2e5904c6b124cfb84758645f6005308f38b25f69ed';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f132b1ddd47a7c9e33bf570e22ac91772d65e83a9253ab2a4e9214a1f35851959c4a1635dc60d05b11c08e49ed7c82111d051acce92006bd30aaa190f9a59a16';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f4af314a661b3432ad4e0989815738f68b1539efca19accb780385ccad1a0991bea97363535104ce68e8a74dcc917d1873fb8e7c9e68e1c5d27a51414bb1cab7';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8756a4e5ecadf1f0813d46bef350f850cf36dae2c2b1042a875f78ddb5a2baa9d0bef6c613c72d2e2c8af6935038b6aa91f169baed13912a6c97a6703afca82';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8f57df189d0deec4de805469a45c68384b984937e7d1dc1d3fe9d0d3bf6924f0f5edb3f8cdbfae91c0e8fae15b1279a0397123059023cb6b82e6a36677c4443';
+[2020/02/11 21:20:19][INFO][updateSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('3348f385a7e15f564f61fbb3fb6dd1cdb9d47543f48cc76915ea8cead07fc2c12a1acdc54fad7eb10e07a435e86acaa8530b280cb568d3e1ce574ec823845664','testemail2@uci.edu',1,'2020-02-11 21:20:19.09','2020-02-11 21:20:19.09','2020-02-11 21:50:19.09')
+[2020/02/11 21:20:19][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 21:20:19][INFO][login]  User logged in successfully.
+[2020/02/11 21:20:24][INFO][privilege]  Received post request
+[2020/02/11 21:20:24][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:20:24][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:20:24][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:20:24][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:20:24][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:20:31][INFO][privilege]  Received post request
+[2020/02/11 21:20:31][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:20:31][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:20:31][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:20:31][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:20:31][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:21:37][INFO][privilege]  Received post request
+[2020/02/11 21:21:37][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:21:37][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:21:37][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:21:37][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:21:37][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:21:39][INFO][privilege]  Received post request
+[2020/02/11 21:21:39][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:21:39][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:21:39][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:21:39][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:21:39][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:23:50][INFO][privilege]  Received post request
+[2020/02/11 21:23:50][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:23:50][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:23:50][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:23:50][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:23:50][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:28:00][INFO][privilege]  Received post request
+[2020/02/11 21:28:00][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:28:00][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:28:00][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:28:00][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:28:00][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:35:01][INFO][privilege]  Received post request
+[2020/02/11 21:35:01][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:35:01][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:35:01][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:35:01][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:35:01][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:38:37][INFO][privilege]  Received post request
+[2020/02/11 21:38:37][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:38:37][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:38:37][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:38:37][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:38:37][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:38:56][INFO][privilege]  Received post request
+[2020/02/11 21:38:56][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:38:56][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:38:56][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:38:56][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:38:56][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:39:16][INFO][privilege]  Received post request
+[2020/02/11 21:39:16][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:39:16][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:39:16][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:39:16][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:39:16][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:39:45][INFO][privilege]  Received post request
+[2020/02/11 21:39:45][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:39:45][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:39:45][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:39:45][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:39:45][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:40:25][INFO][privilege]  Received post request
+[2020/02/11 21:40:25][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:40:25][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:40:25][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:40:25][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:40:25][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:40:36][INFO][privilege]  Received post request
+[2020/02/11 21:40:36][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:40:36][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:40:36][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:40:36][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:40:36][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:41:32][INFO][privilege]  Received post request
+[2020/02/11 21:41:32][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:41:32][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:41:32][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:41:32][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:41:32][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:43:54][INFO][privilege]  Received post request
+[2020/02/11 21:43:54][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:43:54][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:43:54][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:43:54][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:43:54][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:44:12][INFO][privilege]  Received post request
+[2020/02/11 21:44:12][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:44:12][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:44:12][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:44:12][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:44:12][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:44:50][INFO][privilege]  Received post request
+[2020/02/11 21:44:50][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:44:50][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:44:50][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:44:50][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:44:50][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:45:27][INFO][privilege]  Received post request
+[2020/02/11 21:45:27][INFO][privilege]  Request:
+{"email":"test1@uci.edu","plevel":5}
+[2020/02/11 21:45:27][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'test1@uci.edu'
+[2020/02/11 21:45:27][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:45:27][INFO][privilege]  User's plevel: 3 Test Against: 5
+[2020/02/11 21:45:27][INFO][privilege]  test1@uci.eduhas sufficient privilege level.
+[2020/02/11 21:46:24][INFO][privilege]  Received post request
+[2020/02/11 21:46:24][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:46:24][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:46:24][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:46:24][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:46:24][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:46:35][INFO][privilege]  Received post request
+[2020/02/11 21:46:35][INFO][privilege]  Request:
+{"email":"test1@uci.edu","plevel":5}
+[2020/02/11 21:46:35][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'test1@uci.edu'
+[2020/02/11 21:46:35][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:46:35][INFO][privilege]  User's plevel: 3 Test Against: 5
+[2020/02/11 21:46:35][INFO][privilege]  test1@uci.eduhas sufficient privilege level.
+[2020/02/11 21:46:44][INFO][privilege]  Received post request
+[2020/02/11 21:46:44][INFO][privilege]  Request:
+{"email":"test1@uci.edu","plevel":5}
+[2020/02/11 21:46:44][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'test1@uci.edu'
+[2020/02/11 21:46:45][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:46:45][INFO][privilege]  User's plevel: 3 Test Against: 5
+[2020/02/11 21:46:45][INFO][privilege]  test1@uci.eduhas sufficient privilege level.
+[2020/02/11 21:53:22][INFO][privilege]  Received post request
+[2020/02/11 21:53:22][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:53:22][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:53:22][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:53:22][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:53:22][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:53:29][INFO][privilege]  Received post request
+[2020/02/11 21:53:29][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:53:29][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:53:29][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:53:29][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:53:29][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:55:07][INFO][privilege]  Received post request
+[2020/02/11 21:55:07][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:55:07][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:55:07][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:55:07][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:55:07][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:55:15][INFO][privilege]  Received post request
+[2020/02/11 21:55:15][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:55:15][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:55:15][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:55:15][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:55:15][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:55:26][INFO][privilege]  Received post request
+[2020/02/11 21:55:26][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:55:26][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:55:26][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:55:26][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:55:26][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:55:31][INFO][privilege]  Received post request
+[2020/02/11 21:55:31][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:55:31][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:55:31][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:55:31][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:55:31][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:55:35][INFO][privilege]  Received post request
+[2020/02/11 21:55:35][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:55:35][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:55:35][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:55:35][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:55:35][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:56:05][INFO][privilege]  Received post request
+[2020/02/11 21:56:05][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:56:05][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:56:05][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:56:05][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:56:05][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:56:59][INFO][privilege]  Received post request
+[2020/02/11 21:56:59][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:56:59][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:56:59][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:56:59][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:56:59][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:57:10][INFO][privilege]  Received post request
+[2020/02/11 21:57:10][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:57:10][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:57:10][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:57:10][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:57:10][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 21:58:15][INFO][privilege]  Received post request
+[2020/02/11 21:58:15][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 21:58:15][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 21:58:15][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 21:58:15][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 21:58:15][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:02][INFO][privilege]  Received post request
+[2020/02/11 22:00:02][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:02][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:02][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:02][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:02][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:04][INFO][privilege]  Received post request
+[2020/02/11 22:00:04][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:04][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:04][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:04][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:04][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:04][INFO][privilege]  Received post request
+[2020/02/11 22:00:04][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:04][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:04][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:04][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:04][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:18][INFO][privilege]  Received post request
+[2020/02/11 22:00:18][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:18][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:18][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:18][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:18][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:21][INFO][privilege]  Received post request
+[2020/02/11 22:00:21][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:21][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:21][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:21][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:21][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:00:28][INFO][privilege]  Received post request
+[2020/02/11 22:00:28][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:00:28][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:00:28][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:00:28][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:00:28][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:04:36][INFO][privilege]  Received post request
+[2020/02/11 22:04:36][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:04:36][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:04:36][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:04:36][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:04:36][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:04:45][INFO][privilege]  Received post request
+[2020/02/11 22:04:45][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:04:45][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:04:45][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:04:45][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:04:45][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:05:35][INFO][privilege]  Received post request
+[2020/02/11 22:05:35][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:05:35][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:05:35][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:05:35][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:05:35][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:05:41][INFO][privilege]  Received post request
+[2020/02/11 22:05:41][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:05:41][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:05:41][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:05:41][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:05:41][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:05:45][INFO][privilege]  Received post request
+[2020/02/11 22:05:45][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:05:45][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:05:45][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:05:45][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:05:45][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:06:13][INFO][privilege]  Received post request
+[2020/02/11 22:06:13][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:06:13][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:06:13][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:06:13][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:06:13][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:06:13][INFO][privilege]  Received post request
+[2020/02/11 22:06:13][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:06:13][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:06:13][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:06:13][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:06:13][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:06:14][INFO][privilege]  Received post request
+[2020/02/11 22:06:14][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:06:14][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:06:14][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:06:14][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:06:14][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:07:48][INFO][privilege]  Received post request
+[2020/02/11 22:07:48][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:07:48][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:07:48][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:07:48][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:07:48][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:07:56][INFO][privilege]  Received post request
+[2020/02/11 22:07:56][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:07:56][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:07:56][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:07:56][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:07:56][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:08:48][INFO][privilege]  Received post request
+[2020/02/11 22:08:48][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:08:48][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:08:48][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:08:48][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:08:48][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:08:50][INFO][privilege]  Received post request
+[2020/02/11 22:08:50][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:08:50][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:08:50][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:08:50][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:08:50][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:08:53][INFO][privilege]  Received post request
+[2020/02/11 22:08:53][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:08:53][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:08:54][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:08:54][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:08:54][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:08:59][INFO][privilege]  Received post request
+[2020/02/11 22:08:59][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:08:59][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:08:59][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:08:59][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:08:59][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:09:46][INFO][privilege]  Received post request
+[2020/02/11 22:09:46][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:09:46][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:09:46][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:09:46][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:09:46][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:09:53][INFO][login]  Received post request
+[2020/02/11 22:09:53][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:09:53][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:09:53][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:09:53][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:09:53][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:09:53][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:53][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:09:54][INFO][updateSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb','testemail@uci.edu',1,'2020-02-11 22:09:53.52','2020-02-11 22:09:53.52','2020-02-11 22:39:53.52')
+[2020/02/11 22:09:54][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:09:54][INFO][login]  User logged in successfully.
+[2020/02/11 22:10:00][INFO][privilege]  Received post request
+[2020/02/11 22:10:00][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:10:00][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:10:00][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:10:00][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:10:00][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:11:07][INFO][privilege]  Received post request
+[2020/02/11 22:11:07][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:11:07][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:11:07][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:11:07][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:11:07][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:12:06][INFO][login]  Received post request
+[2020/02/11 22:12:06][INFO][login]  Request:
+{"email":"testemail2@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:12:06][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:12:07][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:12:07][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:12:07][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0b764afb4108d59516a9275332ac2e711242ba4098d595a36e14bbe284ae9bd6e68aaea893541573c414c308b8558ffba9d4b97f6ca3229594151ab149b5a773';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0c4d9556bb0e6a145fd01625fdb2dedd22fdcaf5c649e4b5685072e0881112011eabdf142baa720b30140f52607269063a34b5c170078dd262e033946294ec25';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f778cefa758bcd5d4c1a3bec1aaefc7daa386f5f76aeb2bb0f1a58fcbecd91675e8ed171e3df26915f8a4baab51858b9bd8283b8b9e9f68a7bb0649e24430f2';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '108f8fd167f5767a5c4b0bc691ba941f7bfc7a9b17f71cc0afb07b9d6abaebce45f8687d0bf03f121569a8a5bbdb5e224edb7eb4a48a92b711c77dc0005bc4df';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1533583a12b1268e3acd9b2187c312f626f72fd713f2f056617af10bd742843c549ab62e2e9931d625e361b513810cb3faedd7e9e749191105897987e6c288df';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1c0b90fc31e7cfaf28d56f61bcbc440537a4d02a0b0244afc375ca88ccd9363b1a797b16be2fc3641f8052ea3ffb3699ee9f02f03375bd2741b6b680cce4fd37';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3348f385a7e15f564f61fbb3fb6dd1cdb9d47543f48cc76915ea8cead07fc2c12a1acdc54fad7eb10e07a435e86acaa8530b280cb568d3e1ce574ec823845664';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '35f307f2be9314ab38d4adfc6dfe10cf1a7a11123471eca1c885173e761afd72d5e9fe1866b283d0821644aaf4b7eeca32ca991ebdf1eb6f92cbd0ce86fd56f3';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '39be2945692b6e54511ba5a7263abeb747071d5cefda4ba323e7fecb5da0ca27afacf0929b2928ee3f2e8707d9f18bcfb196a88639950a36a0663387c3460880';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4a814b4dddf390224ff686f8e12a10a1f4f607fe6e69fbabeeeab0e44ccb4d056c9b668046796dcb77ad933d84e619e5f532ac7de33f230e87ed54b2ca346635';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '517d0bf8d89a4c011d35bfb90c47ec0319165e652c1da11631a8a768e39aee0fcf54f9b993331433f6e3d5e022d9814e9696bcc3bdb88b4087df9986e37c1fe1';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '594394f0b6252c5fb603795887de82e3eb4c57edbc317f8896206ab8169c7db3eda04cd841fc3749bee31d628b03f47c6e41d86afd2cd0dc865ae5cbf3543c28';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5ade7787a81ad4973fcd0ea0fadb1e6fc4a0c70326a6c7837cb0ed8f5a9b5cf243f0d17a9ea4fef7365bb02ee7f36e8782e7d49d40c04f29dc3a079aab9e6702';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '609511c48c55f54a3b6f7ab56df9c0683d5dfee6ab1d87f41375fa00ee25c7a00af7115ed733fa76b71ad0f4070743dc1b73d0285917c0f8533a0f0223f7aa28';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '758331436ddca94a57edd0a00c97af1978b85f9c3a88236015c6618cbc2081cd77f989bf2bf61233df6c4dfb5c811d49505fde3893a5ee77ec3751107011df77';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '8d7e23413310ba84115bdbaef412412543c6cd1eea1f2e6a88265c716a245415082cce3b3e74b31afff8691169835aa5e812712495f5c0026d7e6bcfd5fbfa2c';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9d2d597ece13b0ef00216848265af8a020e5d95e6a28db2b446695a57d743da1ad064d5c06d23ce3add066cd1d66a6b1ff966e3e23ada7e3e9c886c6c1aa01cb';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a3ecb3d9272014104915e63325b0012ee2e49450b498aefdab62fb1f8e31e64b264f74f1056c4d9b97f7c2fa920eb288adbf2a5d495eb706862b1ab6c125d1e8';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'a9029e2525c572da39bdeb98808498902c3d202299ddd80759d4b616456627b5eb66ae2e6726f348cef7f87a2981a27891d3452ee0434a00c22a72424a9aa28f';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ac21515d105d929b50e9a8b2762f07c2c498559976be8504f6d9685fdf4dbca4efb7ad2e8f0fb817c69dd70a2f275d240d43bdcdc1e9dd046b87c6ee30f248dc';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b10b20e4eef4ca60f057e4713829d57e4e4fd2c663410f92d2e11caf13403ce35fcc53ba0904587a6c77710d770a2c88a83de817dbd1c740c30e2a6eb4a4576d';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b4d1ebb95e933a743047fce667d778d99856e5c5f5f23a0e7ed3bcbd2b11919dffac2796066ccbb48e2f714a1f80a67ea4a9bdc3fa9be5afb06350e585e5ed95';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b7d6670329577700d592f499a30f53d593e26e9b3faae69a58cb2b55796a210179ea9d7c9be5d5d4b35e109ff1edbe97d145a3b55f53cfdf730ff7a1c16afc21';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'bb9cee04a710670db78999b7d48257f4dcf12ebe71e75d5cead2d92aeef892fe93943f5007974f5da59f259bc5f24425a501579e01ceed71c53ca393e12fbf34';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'be85bf20080d383d09cdf221e355748a85624f711d1f49bb6a755ec02dc156b1f3fe6c98f7cd35053f1a1b9621ce89ea53a4f330096de924bb349c0f24333c41';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c295efb9525383253fb79293c73fb3092424eff21629eb3e98b7f806b456c1367766d285791196f3789ef33bb7565b18d5c01cdcc7d8daa2f0f000cc34a0e171';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5f714b15a49ca682093ab3f53030892d5ce0f9bbcdbf3180258fbb6c9f0f27096a0fa5a15780b72e9bba19d7602a507ca9e22eda22e2d023ed50e478dd69aad';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6b81c60b45ba368b6a1ee3d4c263f5457aa379591a6a6a65ddcc5cba9b15d81e9ce5814d1128dd01391b6dda69baaa86439c65b379baea5fcb81bddbabef6fe';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd6ff2e5da9721a9105e9f93102fff05048dd4b5b4804b8b2fe9a53d0efdedafed09cce25383d2a7a06b3aa98708d56cda51ee81215e348dac1727e5926114551';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'db982258deb741af2ec4471832843f4c71602d3a8b3cbf1d8dfc49f109dd202fc4c887fcaee2635101b02d85f80122df84bf822d1fc44bc75461e6a1367c4764';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'eb9620c583ef6e8390d78d03da60a4c4a30438d2e1f6ce9f007054d20de62ae00e4e9a89568e5c51d1cf162f3eadf871ead3d941adf39980c40162da1b3bbb03';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ec739b9e1a2055450a074ebf16d2d45bbcd45691da045e5593c80e6a307ad06936cabe71068098d714e39e2e5904c6b124cfb84758645f6005308f38b25f69ed';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f132b1ddd47a7c9e33bf570e22ac91772d65e83a9253ab2a4e9214a1f35851959c4a1635dc60d05b11c08e49ed7c82111d051acce92006bd30aaa190f9a59a16';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f4af314a661b3432ad4e0989815738f68b1539efca19accb780385ccad1a0991bea97363535104ce68e8a74dcc917d1873fb8e7c9e68e1c5d27a51414bb1cab7';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8756a4e5ecadf1f0813d46bef350f850cf36dae2c2b1042a875f78ddb5a2baa9d0bef6c613c72d2e2c8af6935038b6aa91f169baed13912a6c97a6703afca82';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'f8f57df189d0deec4de805469a45c68384b984937e7d1dc1d3fe9d0d3bf6924f0f5edb3f8cdbfae91c0e8fae15b1279a0397123059023cb6b82e6a36677c4443';
+[2020/02/11 22:12:07][INFO][updateSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('a98901783b9e74ba9c50e9d5e35f5f2844e75e3cbf0e0c183a701cd9d8b0b64868ee81930f0569d29e25bae57c3c8df2796e3fe91acf38f3102895f9454f515d','testemail2@uci.edu',1,'2020-02-11 22:12:07.061','2020-02-11 22:12:07.061','2020-02-11 22:42:07.061')
+[2020/02/11 22:12:07][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:12:07][INFO][login]  User logged in successfully.
+[2020/02/11 22:12:19][INFO][privilege]  Received post request
+[2020/02/11 22:12:19][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:12:19][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:12:19][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:12:19][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:12:19][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:14:04][INFO][privilege]  Received post request
+[2020/02/11 22:14:04][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:14:04][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:14:04][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:14:04][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:14:04][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:14:13][INFO][privilege]  Received post request
+[2020/02/11 22:14:13][INFO][privilege]  Request:
+{"email":"testemail2@uci.edu","plevel":5}
+[2020/02/11 22:14:13][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail2@uci.edu'
+[2020/02/11 22:14:13][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:14:13][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:14:13][INFO][privilege]  testemail2@uci.eduhas sufficient privilege level.
+[2020/02/11 22:14:46][INFO][login]  Received post request
+[2020/02/11 22:14:46][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:14:46][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:14:46][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:14:46][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:14:46][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:14:46][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:46][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:14:47][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:47][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb';
+[2020/02/11 22:14:47][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:47][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:14:47][INFO][updateSession]  Query succeeded
+[2020/02/11 22:14:47][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('794b65d19db6c3753c6c1bfb039b4f1156d11720f2948c3cb4344d169b48e81980f2ded46c9fbd0584ac68afeca37a6e3e9037dfa3dc339effa70d703e8d1cca','testemail@uci.edu',1,'2020-02-11 22:14:46.42','2020-02-11 22:14:46.42','2020-02-11 22:44:46.42')
+[2020/02/11 22:14:47][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:14:47][INFO][login]  User logged in successfully.
+[2020/02/11 22:14:56][INFO][privilege]  Received post request
+[2020/02/11 22:14:56][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:14:56][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:14:56][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:14:56][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:14:56][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:15:08][INFO][privilege]  Received post request
+[2020/02/11 22:15:08][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:15:08][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:15:08][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:15:08][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:15:08][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:15:31][INFO][login]  Received post request
+[2020/02/11 22:15:31][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:15:31][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:15:31][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:15:31][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:15:31][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:15:31][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:31][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '794b65d19db6c3753c6c1bfb039b4f1156d11720f2948c3cb4344d169b48e81980f2ded46c9fbd0584ac68afeca37a6e3e9037dfa3dc339effa70d703e8d1cca';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:15:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('6021fd16b88ddcca2eaddececf50ee3117b4f239c5d7b0e8c694d7030b4013ce01b2fb6acc22b85de26a8c1e23809c3958e514a55bced9e5fd8da6fee6f2fc35','testemail@uci.edu',1,'2020-02-11 22:15:31.813','2020-02-11 22:15:31.813','2020-02-11 22:45:31.813')
+[2020/02/11 22:15:32][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:15:32][INFO][login]  User logged in successfully.
+[2020/02/11 22:15:39][INFO][privilege]  Received post request
+[2020/02/11 22:15:39][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:15:39][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:15:39][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:15:39][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:15:39][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:15:48][INFO][privilege]  Received post request
+[2020/02/11 22:15:48][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:15:48][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:15:48][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:15:48][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:15:48][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:18:01][INFO][login]  Received post request
+[2020/02/11 22:18:01][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:18:01][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:18:01][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:18:01][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:18:01][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:18:01][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:18:01][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:18:01][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:18:01][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:18:01][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:01][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6021fd16b88ddcca2eaddececf50ee3117b4f239c5d7b0e8c694d7030b4013ce01b2fb6acc22b85de26a8c1e23809c3958e514a55bced9e5fd8da6fee6f2fc35';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '794b65d19db6c3753c6c1bfb039b4f1156d11720f2948c3cb4344d169b48e81980f2ded46c9fbd0584ac68afeca37a6e3e9037dfa3dc339effa70d703e8d1cca';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:18:02][INFO][updateSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('c389567350e11885fd28ac927ecb5c574a90fd443973ddcf7c01fb0e2882460c60466fd9bd5316dc8eee0c44970d573795a54666b986562e4e78d226ac0a5f94','testemail@uci.edu',1,'2020-02-11 22:18:01.9','2020-02-11 22:18:01.9','2020-02-11 22:48:01.901')
+[2020/02/11 22:18:02][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:18:02][INFO][login]  User logged in successfully.
+[2020/02/11 22:18:19][INFO][privilege]  Received post request
+[2020/02/11 22:18:19][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:18:19][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:18:19][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:18:19][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:18:19][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
+[2020/02/11 22:26:32][INFO][login]  Received post request
+[2020/02/11 22:26:32][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:26:32][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:26:32][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:26:32][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:26:32][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:32][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:26:32][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6021fd16b88ddcca2eaddececf50ee3117b4f239c5d7b0e8c694d7030b4013ce01b2fb6acc22b85de26a8c1e23809c3958e514a55bced9e5fd8da6fee6f2fc35';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '794b65d19db6c3753c6c1bfb039b4f1156d11720f2948c3cb4344d169b48e81980f2ded46c9fbd0584ac68afeca37a6e3e9037dfa3dc339effa70d703e8d1cca';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c389567350e11885fd28ac927ecb5c574a90fd443973ddcf7c01fb0e2882460c60466fd9bd5316dc8eee0c44970d573795a54666b986562e4e78d226ac0a5f94';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:26:33][INFO][updateSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('30c26a877e0eb77f757facdd6795878a50c8cfec3102a6510c61c6d79f3b7547624a3cae82d64b3cd3eef979b3bf508e0604bcf177628a723ab6451d08ea7186','testemail@uci.edu',1,'2020-02-11 22:26:32.751','2020-02-11 22:26:32.751','2020-02-11 22:56:32.751')
+[2020/02/11 22:26:33][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:26:33][INFO][login]  User logged in successfully.
+[2020/02/11 22:27:48][INFO][login]  Received post request
+[2020/02/11 22:27:48][INFO][login]  Request:
+{"email":"testemail@uci.edu","password":["P","a","s","s","w","o","r","d","1"]}
+[2020/02/11 22:27:48][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:27:48][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:27:48][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM session WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:27:49][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '022daca2b933f4ccd8b9f2f0c488011f512e97eb57bf141e8546c5106f88ec3361cc2fd7d0d4f9e3839813e1e67be6c5ff5b0bbe4f9545187aafbc3a81f32c2d';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '08ad74949d68769c3e917c0cea2b3eb10878f3854864ea54a2c6a47eec1185c80e2715f3f4b6c590c751e0d4a64f1d46b84b1a0aca62e0aaa2b2c2a53cee95d0';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '0f0c4bcd282bf6d0e619d8a3d11143e45788ebab6fbcfd7fa52e1c962ab6c5471633e6990fb6974c2f7d27ef0e77af76843df3dabbd136a753e97af5ea7279fa';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '198dba97011a4b80e375a659b99f3b3d01696eefa1454ce3369dc276ddf215391c4f39ab857d8071f186e40632f38cd8c281734cbef503db82a7a5aa0fec2192';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1e1961061c50b29b88256e45e3ef6e6cb1d2fe5d0f5ba3870d4c3fef0e9b095f8bcb5ee63687df0251d4cd8f735fd1ec3572a13931367b401009a2d9f827f2b7';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '1ff162eeb84a579a5d5ca69b94cc268042da9f819ef30dcc11a626868d34c5d59cd14669f7654179cddd6f0d83cbd4e8b2444d4a2a1211d239330a8060464f8c';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '29099be6d4412924a9131294d99fd77ee6ae0d7005a0184249cc52e06d5782d22c6064f0f2d8aeadc054e5edc6a4ce7e80153dca48844c0489cf06775f952961';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '30c26a877e0eb77f757facdd6795878a50c8cfec3102a6510c61c6d79f3b7547624a3cae82d64b3cd3eef979b3bf508e0604bcf177628a723ab6451d08ea7186';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '3663a634eb16290d688ad47cf2d061bd218d58432df08b3bf88def63c9ac6462601cbd6a1086077c83da642d56e3e8be7f77c6eecb4a5cdcaf347fa1f8eb2053';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40f99b6c72424927e9ab8b75d41606d863f334902a43d43d4be6c7579d57ed1d18da9ddf03373b70e7b4079b4f1fae8cfab941ff2f0fff2ba5f2dd51142ee0e0';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '40fc99b9f88231ac3bfc63742674194d1161c5e3ab5a049513b86487ee5fb3fccb687ed2d791456a3ff212dadf01096ab82808b8a950751dbebd32f02267c2ce';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '4e7695322d0db81e29b0af45f7dcf4e884b6f737cc8230e56b58e72e820a7437226c376897348b8753b4ee6489a687ad5642e0cbacbf862d9e5eda172524e3b0';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5053c75726fbfeeacce0464c2296a8058d0b2e2608de056e5618dda9f2d008699d1932d04358e109e9a978ffb2bb171c7616f4e8055f6d212577f96552f8194a';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5339c5501dfc649a648baefef88b8ae4070afcffd43d53f8dff2df34df19d2328501e700639f24944613b99e985850080ae5c0deeaa933163f08deef7d4a3b25';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '549efd48982469ed4d71801fbac20f1c28e0912143c544835c6db099c3bc4e7db9a5f84d3f14cfabfc7d465a6c1826ddd9ad7c4fd929e0acd8f4ae2feda7146b';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591097b8c07654a1dd617f9d70b2adbaac715db7ed77bc579e8b18d602db96dfc03e0d9b6eae8ebd6bfece5325784d495b306b4c2e5b4d3ed0faf0d95c2abf05';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '591c7d3bbd9b8f23a8f88d930a20eb01152bacd8c3580a7fe195a48e3f6d352ab2244f4a0ca04c425929db246c330b62f787a11362ecb83a8b946c67db84d895';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '5c2fa2227724ce13ccd788f26675afa82a819c98fa31e7681cf1207f5e0ab05e85e516dcd9953da2e657a87763cc28680e124ea7829d6a613dc981a3c5a253a8';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6021fd16b88ddcca2eaddececf50ee3117b4f239c5d7b0e8c694d7030b4013ce01b2fb6acc22b85de26a8c1e23809c3958e514a55bced9e5fd8da6fee6f2fc35';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '6b0b250cda615f6658beff211a4fa2106e8aa903c1c398db9cef6e3fe9bac1b020fa0ee1401f3e8d8cdcad14c93ad16c77c77f4a138b9f706b07a1cc67b99a53';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '754c8ed85984fe99018703fc0c78907e72f3f74b787fac7ce08d01379cef5b953905ebfb7b57fd7d9ca2876d48833312474423b563abf98d6ef1124fcca94d43';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '76b4640d234c465a57d21df4a36df387a2c5792781e7c6a3b4289c4cd4fd22849229934f0943b6ad435212f3eccb2264cd8fd77c3eb8a6ffa48e7ce908c51c9e';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '77b89e205257a70d41d662eb5c244d7f67c4f28661be40a9baffcdea2c805a18dcbb0ea9c7e6e0ba769817cb800be2e804dab606d618b0b0ea8ec78ffc3ae27b';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '794b65d19db6c3753c6c1bfb039b4f1156d11720f2948c3cb4344d169b48e81980f2ded46c9fbd0584ac68afeca37a6e3e9037dfa3dc339effa70d703e8d1cca';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7b61bb5fc538dc1ba4c0df30fbb9cf3ab3e52cad9cd9a508b0b4f46e5a3602ea55e765773dbc808abb4edf6ec3ced8fa66f63b66f9fa669499530c8f513fa7a1';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '7e1d800d26c2cd9f23b2073f12a5911adbf311fcd7d510ee217e2eb7c61d14bae2f8c11fdf81147e8508721cefa307bc68324472db4942c300c2ac749cde1ddf';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '90472fe4e17d755d504ba1b0f4a8eed627113929a7f28915876fa6da38d0734bbc9204283ff7924f53c93ff6c554eced21456efb7785649ab91ed2444d18ae42';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = '9f398e35f5bf0a84b9479cb324da5e85a7110349efa2856b000f49514083900117d3216b17759f8f8daaedd774841a044c5805054535d22a0d79a1abd7d91446';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'af74cdf8c1342f09df041c22228ab5d27da03146ab31e280c98a0a75e2d05f349da91e8becc940890802c2230378bdd4cf3323ce4adec9a1bd219b92ec04fb75';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b2aba73376aea5942cbc02770e2ef8cba35c64727f4a5f98efd4ebf2dd27804f47dec1e3a4330cb504f286f2265354f634aa2ecd31e95a1606497efaf08e3ba9';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b552a7c919f6c61383f5f747f0b50f3066f308f3357f9c1cda67412d243734baaaaa7ef96ea1cc820901744f32659c4b6484b9a9f90861d98710558bb89932cb';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'b80b43df3ca264fe9016bbf5866864ea2f195eccd472002f862c6225bb04762c6e349ebb37b709487fe44e1004bd3e039a426fa0aa983e2718533f5ca93aa96a';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c045b3474704e92b81450d060e9924db249457011d57365c079934c2a68b0b0c9ddbce52244ed389ac8a2b7454af3c6a6f37f8d84c2087e79e0d5e228ae6309a';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c389567350e11885fd28ac927ecb5c574a90fd443973ddcf7c01fb0e2882460c60466fd9bd5316dc8eee0c44970d573795a54666b986562e4e78d226ac0a5f94';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'c5e80e1afcfa10eb9653f38650f36c1f29778a1a330748dfe947423c905ab1aebf1fff9348406439e162e80ece50f6254d18d3cd62fccc743b62e42a991775f2';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'd0a313dc0007ca9c7d0ef364afe12121edb575bac5373695860e2b4f5f0451a28fc0ee3d838d03852016af298e278bf9142fdd0d78b2c2c41d55aa5d159c31c9';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'e54b92096ae7834611d50d2a8109fec2ed5f76b60f2cd63b3c3729909178748d75803c7f8eec6a14fdc235d357a6c2e72a62fbfe9a7fca99c271a461731dfacb';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][updateSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Update session SET status = 4 WHERE 'session_id' = 'ffb48061e3c321312b9512dad6ba3edd7dace859bc0ad6f46902088eba7c8bb856117f39f57b0a999cf0ca187ddce2b5956ce815484ee3a554f5ef0d14069669';
+[2020/02/11 22:27:49][INFO][updateSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][InsertNewSession]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: Insert into session (session_id, email, status, time_created, last_used, expr_time) values ('21b9fa4f4321f39b92540a64c50e19f352872095001917a83121d4aee94a382afbf154ffea233ee62c16cc07be14dbf01e9357c7b4a243037762e3ddf72bd51a','testemail@uci.edu',1,'2020-02-11 22:27:49.0','2020-02-11 22:27:49.0','2020-02-11 22:57:49.0')
+[2020/02/11 22:27:49][INFO][InsertNewSession]  Query succeeded
+[2020/02/11 22:27:49][INFO][login]  User logged in successfully.
+[2020/02/11 22:27:59][INFO][privilege]  Received post request
+[2020/02/11 22:27:59][INFO][privilege]  Request:
+{"email":"testemail@uci.edu","plevel":5}
+[2020/02/11 22:27:59][INFO][retrievalWithEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM user WHERE email = 'testemail@uci.edu'
+[2020/02/11 22:27:59][INFO][retrievalWithEmail]  Query succeeded
+[2020/02/11 22:27:59][INFO][privilege]  User's plevel: 5 Test Against: 5
+[2020/02/11 22:27:59][INFO][privilege]  testemail@uci.eduhas sufficient privilege level.
